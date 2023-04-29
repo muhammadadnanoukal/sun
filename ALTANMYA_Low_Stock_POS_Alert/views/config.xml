@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pos_res_config_inherit" model="ir.ui.view">
+        <field name="name">pos.res.config.inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <div id="pos_inventory_section" position="after">
+                <h2>POS Low Stock Alert</h2>
+                <div class="row mt16 o_settings_container" id="pos_session_stock">
+                    <div class="col-xs-12 col-md-6 o_setting_box" title="Allow Order when Product is Out of Stock">
+                         <div class="o_setting_left_pane">
+                            <field name="pos_allow_order_when_product_out_of_stock"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="pos_allow_order_when_product_out_of_stock" string="Allow order when product is out-of-stock"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </field>
+    </record>
+</odoo>
