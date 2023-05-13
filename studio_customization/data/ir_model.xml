@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.classification_a1173af7-6984-40b0-93d6-dbd61c05a528" model="ir.model" context="{'studio': True}">
+    <field name="info"> Main super-class for regular database-persisted Odoo models.
+
+    Odoo models are created by inheriting from this class::
+
+        class user(Model):
+            ...
+
+    The system will later instantiate the class once per database (on
+    which the class' module is installed).
+    </field>
+    <field name="is_mail_thread" eval="True"/>
+    <field name="is_mail_activity" eval="True"/>
+    <field name="model">x_classification</field>
+    <field name="name">Classification</field>
+    <field name="state">manual</field>
+    <field name="transient" eval="False"/>
+  </record>
+  <record id="studio_customization.quality_check_lines_5a238713-7ee9-470d-8191-09d24a96e647" model="ir.model" context="{'studio': True}">
+    <field name="info"> Main super-class for regular database-persisted Odoo models.
+
+    Odoo models are created by inheriting from this class::
+
+        class user(Model):
+            ...
+
+    The system will later instantiate the class once per database (on
+    which the class' module is installed).
+    </field>
+    <field name="is_mail_thread" eval="False"/>
+    <field name="is_mail_activity" eval="False"/>
+    <field name="model">x_quality_check_line_ab55a</field>
+    <field name="name">Quality Check  Lines</field>
+    <field name="state">manual</field>
+    <field name="transient" eval="False"/>
+  </record>
+</odoo>

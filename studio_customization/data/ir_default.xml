@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.active_classificatio_38583df8-3964-4cd6-95e5-7740fc329742" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.active_classificatio_f2adf3fa-ec9b-4cfd-b788-39a8d5529553"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">true</field>
+  </record>
+  <record id="studio_customization.new_integer_employee_45a6c828-945e-4ad5-b8e2-c1f9a17cbaef" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_employee_2c5c8537-7811-4769-8d40-df95b7471402"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.new_integer_product_92cb6073-c46c-45b4-a0a9-256affee529c" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.new_integer_product_41194b56-0299-474b-bdb3-c3989b0849b4"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">"0"</field>
+  </record>
+  <record id="studio_customization.sequence_classificat_88f7ab9e-179c-47c4-ab2c-9b7009e7ed31" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.sequence_classificat_553a4624-603f-4ff7-b5da-3f01618ccba0"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">10</field>
+  </record>
+</odoo>

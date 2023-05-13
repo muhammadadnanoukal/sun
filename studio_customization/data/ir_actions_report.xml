@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="mrp_production_report.batec_mrp_production_report" model="ir.actions.report" context="{'studio': True}">
+    <field name="attachment" eval="False"/>
+    <field name="attachment_use" eval="False"/>
+    <field name="binding_model_id" ref="mrp.model_mrp_production"/>
+    <field name="binding_type">report</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="model">mrp.production</field>
+    <field name="multi" eval="False"/>
+    <field name="name">Print Label</field>
+    <field name="paperformat_id" ref="studio_customization.12cm_8cm_d7e26f05-30c2-4e97-95a5-f609ac7ff60b"/>
+    <field name="report_name">mrp_production_report.mrp_production_report_id</field>
+    <field name="report_type">qweb-pdf</field>
+  </record>
+  <record id="studio_customization.sales_order_report_3fd6f013-71ca-4f9a-a29a-d98789549fbe" model="ir.actions.report" context="{'studio': True}">
+    <field name="attachment" eval="False"/>
+    <field name="attachment_use" eval="False"/>
+    <field name="binding_model_id" ref="sale.model_sale_order"/>
+    <field name="binding_type">report</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="model">sale.order</field>
+    <field name="multi" eval="False"/>
+    <field name="name">Sales Order Report</field>
+    <field name="paperformat_id" eval="False"/>
+    <field name="report_name">studio_customization.studio_report_docume_c8ea513d-f447-4ec5-9087-80a635ea061d</field>
+    <field name="report_type">qweb-pdf</field>
+  </record>
+</odoo>

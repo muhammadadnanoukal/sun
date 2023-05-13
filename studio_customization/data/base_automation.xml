@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.inform_users_5_600ff6e3-316a-4ef1-9439-92b5142e3363" model="base.automation" context="{'studio': True}">
+    <field name="action_server_id" ref="studio_customization.inform_users_5_0b476017-eb50-4b20-8c04-13129ed8253a"/>
+    <field name="active" eval="True"/>
+    <field name="filter_domain">[("state", "=", "done")]</field>
+    <field name="filter_pre_domain">[("state", "!=", "done")]</field>
+    <field name="last_run" eval="False"/>
+    <field name="on_change_field_ids" eval="[(6, 0, [])]"/>
+    <field name="trg_date_id" eval="False"/>
+    <field name="trg_date_range" eval="False"/>
+    <field name="trg_date_range_type" eval="False"/>
+    <field name="trigger">on_write</field>
+  </record>
+</odoo>

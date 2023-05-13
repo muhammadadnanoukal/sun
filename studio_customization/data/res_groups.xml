@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="mrp.group_mrp_manager" model="res.groups" context="{'studio': True}">
+    <field name="color" eval="False"/>
+    <field name="comment" eval="False"/>
+    <field name="implied_ids" eval="[(6, 0, [ref('mrp.group_mrp_user')])]"/>
+    <field name="name">Administrator</field>
+    <field name="share" eval="False"/>
+  </record>
+  <record id="studio_customization.manufacturing_admini_b5fdb6b0-dfcb-4836-9450-0d8fa6db253d" model="res.groups" context="{'studio': True}">
+    <field name="color" eval="False"/>
+    <field name="comment" eval="False"/>
+    <field name="implied_ids" eval="[(6, 0, [ref('mrp.group_mrp_user')])]"/>
+    <field name="name">Bill of Material</field>
+    <field name="share" eval="False"/>
+  </record>
+</odoo>

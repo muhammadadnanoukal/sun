@@ -1,0 +1,1308 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.account_work_center__344d6773-910b-4fc4-a0aa-92555fdf0305" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Account</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">mrp.routing.workcenter</field>
+    <field name="model_id" ref="mrp.model_mrp_routing_workcenter"/>
+    <field name="name">x_studio_many2many_field_sojOy</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation">account.account</field>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table">x_account_account_mrp_routing_workcenter_rel</field>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">many2many</field>
+  </record>
+  <record id="studio_customization.active_classificatio_f2adf3fa-ec9b-4cfd-b788-39a8d5529553" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Active</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">x_classification</field>
+    <field name="model_id" ref="studio_customization.classification_a1173af7-6984-40b0-93d6-dbd61c05a528"/>
+    <field name="name">x_active</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking">1</field>
+    <field name="translate" eval="False"/>
+    <field name="ttype">boolean</field>
+  </record>
+  <record id="studio_customization.classification_emplo_ddbc9cff-60ee-4355-9942-f61aa32e6e50" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Classification</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_many2one_field_Lcl6P</field>
+    <field name="on_delete">set null</field>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation">x_classification</field>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">many2one</field>
+  </record>
+  <record id="studio_customization.description_classifi_1ff82bfe-aee1-4cd1-b7bd-d696d8caea35" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Description</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">x_classification</field>
+    <field name="model_id" ref="studio_customization.classification_a1173af7-6984-40b0-93d6-dbd61c05a528"/>
+    <field name="name">x_name</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="True"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking">1</field>
+    <field name="translate" eval="True"/>
+    <field name="ttype">char</field>
+  </record>
+  <record id="studio_customization.description_quality__a3119da5-dc51-4d65-a901-bd86cfa144e1" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Description</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">x_quality_check_line_ab55a</field>
+    <field name="model_id" ref="studio_customization.quality_check_lines_5a238713-7ee9-470d-8191-09d24a96e647"/>
+    <field name="name">x_name</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="True"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="True"/>
+    <field name="ttype">char</field>
+  </record>
+  <record id="studio_customization.employee_maintenance_a1a41121-d162-460d-a75e-dd56542baad3" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Employee</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">maintenance.request</field>
+    <field name="model_id" ref="maintenance.model_maintenance_request"/>
+    <field name="name">x_studio_many2many_field_gY36R</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation">hr.employee</field>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table">x_hr_employee_maintenance_request_rel</field>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">many2many</field>
+  </record>
+  <record id="studio_customization.new_date_employee_202ed211-6c78-461e-be7d-9714e056b6f2" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">S.I Date</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_si_date</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">date</field>
+  </record>
+  <record id="studio_customization.new_date_time_employ_e4135738-cc5d-4ddd-ba2f-9d9b75226f45" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">End Of Postponing</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_end_of_postponing</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">datetime</field>
+  </record>
+  <record id="studio_customization.new_date_time_employ_ee31d05d-f8a3-4964-a6ae-0b4860d01770" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">ID Date</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_id_date</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">datetime</field>
+  </record>
+  <record id="studio_customization.new_decimal_quality__38b2c7bd-7e94-42dd-9bef-147ee177b0a4" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Actual Density :</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">quality.check</field>
+    <field name="model_id" ref="quality.model_quality_check"/>
+    <field name="name">x_studio_actual_density_</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">float</field>
+  </record>
+  <record id="studio_customization.new_decimal_quality__5b8d057f-9615-46ea-925b-5c23f800808f" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Observed temperature : </field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">quality.check</field>
+    <field name="model_id" ref="quality.model_quality_check"/>
+    <field name="name">x_studio_observed_temperature_</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">float</field>
+  </record>
+  <record id="studio_customization.new_decimal_quality__f96a8ccf-2386-4435-a679-5df5d2673165" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Supplier Density :</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">quality.check</field>
+    <field name="model_id" ref="quality.model_quality_check"/>
+    <field name="name">x_studio_supplier_density_</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">float</field>
+  </record>
+  <record id="studio_customization.new_integer_employee_2c5c8537-7811-4769-8d40-df95b7471402" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">S.I Number</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_si_number</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">integer</field>
+  </record>
+  <record id="studio_customization.new_integer_product_41194b56-0299-474b-bdb3-c3989b0849b4" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Internal Reference 2 </field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">product.template</field>
+    <field name="model_id" ref="product.model_product_template"/>
+    <field name="name">x_studio_internal_reference_2</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">integer</field>
+  </record>
+  <record id="studio_customization.quality_check_lines_0e40db4b-1be7-49c4-8709-2353059c7dd6" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">X Quality Check</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">x_quality_check_line_ab55a</field>
+    <field name="model_id" ref="studio_customization.quality_check_lines_5a238713-7ee9-470d-8191-09d24a96e647"/>
+    <field name="name">x_quality_check_id</field>
+    <field name="on_delete">set null</field>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation">quality.check</field>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">many2one</field>
+  </record>
+  <record id="studio_customization.new_lines_quality_ch_8c3ddcf0-64ba-49c9-aaa3-f90cd25565f5" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="False"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">New Lines</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">quality.check</field>
+    <field name="model_id" ref="quality.model_quality_check"/>
+    <field name="name">x_quality_check_line_ids_4451f</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation">x_quality_check_line_ab55a</field>
+    <field name="relation_field">x_quality_check_id</field>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">one2many</field>
+  </record>
+  <record id="studio_customization.new_monetary_employe_595fd9a5-6829-474f-990b-b03319c107bd" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Food Allowance</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.contract</field>
+    <field name="model_id" ref="hr_contract.model_hr_contract"/>
+    <field name="name">x_studio_food_allowance</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">monetary</field>
+  </record>
+  <record id="studio_customization.new_monetary_employe_60465070-db4d-4059-9c20-a42c667c5d82" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Transportation Allowance </field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.contract</field>
+    <field name="model_id" ref="hr_contract.model_hr_contract"/>
+    <field name="name">x_studio_transportation_allowance</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">monetary</field>
+  </record>
+  <record id="studio_customization.new_monetary_employe_69f1f710-f975-432a-8ea0-31113c32f4c8" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Incentive Allowance</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.contract</field>
+    <field name="model_id" ref="hr_contract.model_hr_contract"/>
+    <field name="name">x_studio_incentive_allowance</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">monetary</field>
+  </record>
+  <record id="studio_customization.new_monetary_employe_6bee32f9-b33a-487e-98a8-cfb76d608b6e" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Representative Allowance</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.contract</field>
+    <field name="model_id" ref="hr_contract.model_hr_contract"/>
+    <field name="name">x_studio_representative_allowance</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">monetary</field>
+  </record>
+  <record id="studio_customization.new_monetary_employe_a61295d3-74d4-4c98-9df0-9c7c8002f3fe" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Natural Work Allowance </field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.contract</field>
+    <field name="model_id" ref="hr_contract.model_hr_contract"/>
+    <field name="name">x_studio_natural_work_allowance</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">monetary</field>
+  </record>
+  <record id="studio_customization.new_monetary_employe_d16245f9-ec3f-492a-b84b-9713f912630d" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Skills Allowance</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.contract</field>
+    <field name="model_id" ref="hr_contract.model_hr_contract"/>
+    <field name="name">x_studio_skills_allowance</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">monetary</field>
+  </record>
+  <record id="studio_customization.new_monetary_employe_e399a04d-3444-4770-be97-2eb797d264ad" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Mobile Allowance </field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.contract</field>
+    <field name="model_id" ref="hr_contract.model_hr_contract"/>
+    <field name="name">x_studio_mobile_allowance</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">monetary</field>
+  </record>
+  <record id="studio_customization.new_multiline_text_e_bfa48d4f-8b9d-4526-8187-8618bc572fd6" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Pre-Experience</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_pre_experience</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">text</field>
+  </record>
+  <record id="studio_customization.new_multiline_text_e_c4011d60-55d6-4b15-8f07-9487d7d66bc0" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Local-Experience</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_local_experience</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">text</field>
+  </record>
+  <record id="studio_customization.new_multiline_text_q_9499d700-ef43-440e-a503-984b814e5800" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">New Multiline Text</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">quality.check</field>
+    <field name="model_id" ref="quality.model_quality_check"/>
+    <field name="name">x_studio_text_field_Bxan5</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">text</field>
+  </record>
+  <record id="studio_customization.new_text_job_positio_5deae616-0727-49fc-acbc-55eb3a1b7cb5" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">A-Job Title</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.job</field>
+    <field name="model_id" ref="hr.model_hr_job"/>
+    <field name="name">x_studio_a_job_title</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">char</field>
+  </record>
+  <record id="studio_customization.new_related_field_em_96076858-19c0-45c8-bbf2-e5ccf1dafb90" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="False"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">A-Job Title</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_a_job_title</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="True"/>
+    <field name="related">job_id.x_studio_a_job_title</field>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">char</field>
+  </record>
+  <record id="studio_customization.new_related_field_in_3948e366-383d-424e-8e67-de78f793e66c" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="False"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">New Related Field</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">stock.route</field>
+    <field name="model_id" ref="stock.model_stock_route"/>
+    <field name="name">x_studio_related_field_lekTd</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="True"/>
+    <field name="related">supplied_wh_id.active</field>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">boolean</field>
+  </record>
+  <record id="studio_customization.new_related_field_qu_1b869cc6-a4bf-4c24-9786-a6e4d5ec7e66" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="False"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">New Related Field</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">stock.quant</field>
+    <field name="model_id" ref="stock.model_stock_quant"/>
+    <field name="name">x_studio_related_field_2s1Fk</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="True"/>
+    <field name="related">product_id.code</field>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="False"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="False"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">char</field>
+  </record>
+  <record id="studio_customization.new_selection_employ_0e471b6b-33c0-45c7-8bcf-5752731ec30c" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Smoker Y/N</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_smoker_yn</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection">[('Smoker', 'Smoker'), ('Non Smoker', 'Non Smoker')]</field>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record id="studio_customization.new_selection_employ_2de96fc6-4795-45d2-bd6c-e562115ede93" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Military service</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_military_service</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection">[('Done', 'Done'), ('Exempt', 'ًُُExempt'), ('Postponed', 'Postponed')]</field>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record id="studio_customization.new_selection_employ_3097b03d-4fb7-4d3e-82d0-722f7ae958da" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Entity</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_entity</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection">[('BU0', 'BU0'), ('BU1', 'BU1'), ('BU2', 'BU2'), ('SC', 'SC')]</field>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record id="studio_customization.new_selection_employ_ed9fa999-56b7-45e3-aebd-04523b0a5413" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Educational Degree</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_educational_degree</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection">[('Bachelor', 'Bachelor'), ('Intermediate Institute', 'Intermediate Institute'), ('Master', 'Master'), ('High School', 'High School'), ('Elementary', 'Elementary'), ('No Certificate', 'No Certificate')]</field>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record id="studio_customization.new_selection_qualit_2654a3ec-d4dc-4e1d-924b-d1dd15588a25" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Water content :</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">quality.check</field>
+    <field name="model_id" ref="quality.model_quality_check"/>
+    <field name="name">x_studio_water_content_</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection">[('OK', 'OK'), ('No', 'No')]</field>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record id="studio_customization.new_selection_qualit_400e0328-2f22-44f7-aa76-9bffa1c6701f" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Visual inspection :</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">quality.check</field>
+    <field name="model_id" ref="quality.model_quality_check"/>
+    <field name="name">x_studio_visual_inspection_</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection">[('OK Dark', 'OK Dark'), ('No', 'No')]</field>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">selection</field>
+  </record>
+  <record id="studio_customization.new_text_employee_14719c3f-3206-497b-8cdd-ad1b754b91e3" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Name of Mother</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_name_of_mother</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">char</field>
+  </record>
+  <record id="studio_customization.new_text_employee_348d3c60-191b-4c0b-b5c9-04a2d331752c" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">A-Name</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_a_name</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">char</field>
+  </record>
+  <record id="studio_customization.new_text_employee_5e40aa3f-38c0-4da8-baed-f3ac20ef31d0" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">ID origin</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_id_origin</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">char</field>
+  </record>
+  <record id="studio_customization.new_text_employee_ad19ae71-216f-441e-b1f5-d8720506b3c7" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">New Text</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_char_field_ZjnjF</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">char</field>
+  </record>
+  <record id="studio_customization.new_text_employee_eda42b12-e7ed-4d80-bc2e-3631b4cf8de9" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Name of Father</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">hr.employee</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="name">x_studio_name_of_father</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">char</field>
+  </record>
+  <record id="studio_customization.new_text_product_16c02bb4-f667-444a-86f5-3911da3fa370" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Internal Reference 2 </field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">product.template</field>
+    <field name="model_id" ref="product.model_product_template"/>
+    <field name="name">x_studio_internal_reference_2_1</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">char</field>
+  </record>
+  <record id="studio_customization.new_text_quality_che_6f3b9561-2db4-47da-858a-7d3ba1748276" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Truck No. :</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">quality.check</field>
+    <field name="model_id" ref="quality.model_quality_check"/>
+    <field name="name">x_studio_char_field_jozmV</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">char</field>
+  </record>
+  <record id="studio_customization.sequence_classificat_553a4624-603f-4ff7-b5da-3f01618ccba0" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Sequence</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">x_classification</field>
+    <field name="model_id" ref="studio_customization.classification_a1173af7-6984-40b0-93d6-dbd61c05a528"/>
+    <field name="name">x_studio_sequence</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">integer</field>
+  </record>
+  <record id="studio_customization.sequence_quality_che_554f5337-c720-45ff-8ad5-80be2d1e995f" model="ir.model.fields" context="{'studio': True}">
+    <field name="complete_name" eval="False"/>
+    <field name="compute" eval="False"/>
+    <field name="copied" eval="True"/>
+    <field name="depends" eval="False"/>
+    <field name="domain">[]</field>
+    <field name="field_description">Sequence</field>
+    <field name="groups" eval="[(6, 0, [])]"/>
+    <field name="help" eval="False"/>
+    <field name="index" eval="False"/>
+    <field name="model">x_quality_check_line_ab55a</field>
+    <field name="model_id" ref="studio_customization.quality_check_lines_5a238713-7ee9-470d-8191-09d24a96e647"/>
+    <field name="name">x_studio_sequence</field>
+    <field name="on_delete" eval="False"/>
+    <field name="readonly" eval="False"/>
+    <field name="related" eval="False"/>
+    <field name="relation" eval="False"/>
+    <field name="relation_field" eval="False"/>
+    <field name="relation_table" eval="False"/>
+    <field name="required" eval="False"/>
+    <field name="selectable" eval="True"/>
+    <field name="selection" eval="False"/>
+    <field name="size" eval="False"/>
+    <field name="state">manual</field>
+    <field name="store" eval="True"/>
+    <field name="tracking" eval="False"/>
+    <field name="translate" eval="False"/>
+    <field name="ttype">integer</field>
+  </record>
+</odoo>
