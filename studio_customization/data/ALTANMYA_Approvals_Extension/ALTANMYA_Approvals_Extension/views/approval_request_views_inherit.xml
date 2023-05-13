@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="approvals.approval_request_action_to_review" model="ir.actions.act_window">
+        <field name="domain">['|',
+            '&amp;', ('category_id.show_all_approvals', '=', True) , ('request_status', '=', 'pending'),
+            '&amp;', ('notified_user', 'in', uid), ('request_status', '=', 'pending')
+            ]
+        </field>
+    </record>
+
+    <record id="approvals.approval_request_action_all" model="ir.actions.act_window">
+        <field name="domain">
+            ['|',
+            ('category_id.show_all_approvals', '=', True) ,
+            ('notified_user', 'in', uid)
+            ]
+        </field>
+    </record>
+
+    <record id="approval_request_view_form_inherit" model="ir.ui.view">
+        <field name="name">approval.request.view.form.inherit</field>
+        <field name="model">approval.request</field>
+        <field name="inherit_id" ref="approvals.approval_request_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_confirm']" position="attributes">
+                <attribute name="attrs">{'invisible': ['|', ('approver_ids', '=', []), ('request_status','!=','new')]}
+                </attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_confirm']" position="after">
+                <field name="current_approver" invisible="1"/>
+                <field name="done_indicator" invisible="1"/>
+                <field name="is_user_notified" invisible="1"/>
+                <!--                , ('current_approver.status' , '=', 'not_read')-->
+                <button name="mark_done" type="object" string="Mark Read"
+                        attrs="{'invisible':['|', ('request_status', 'not in', ['refused']),
+                                             '|', ('done_indicator', '=', True), ('is_user_notified','!=', True)]}"/>
+            </xpath>
+            <xpath expr="//button[@name='action_approve']" position="attributes">
+                <attribute name="attrs">{'invisible':['|', ('request_status', 'in', ['approved', 'refused', 'cancel']),
+                    ('user_status','!=','pending')]}
+                </attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_refuse']" position="attributes">
+                <attribute name="attrs">{'invisible':['|', ('request_status', 'in', ['approved', 'refused', 'cancel']),
+                    ('user_status','!=','pending')]}
+                </attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_withdraw']" position="attributes">
+                <attribute name="attrs">
+                    {'invisible':['|','|',('request_status','=','new'),('user_status','in',['waiting',
+                    'pending','cancel']),('user_status','=',False)]}
+                </attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_draft']" position="attributes">
+                <attribute name="attrs">
+                    {'invisible':['|',('request_status','!=','cancel'),'&amp;',('user_status','=',False),('has_access_to_request','=',False)]}
+                </attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_cancel']" position="attributes">
+                <attribute name="attrs">
+                    {'invisible':['|',('request_status','in',['new','cancel']),'&amp;',('user_status','=',False),('has_access_to_request','=',False)]}
+                </attribute>
+            </xpath>
+            <!--            <xpath expr="" position="attrs">-->
+
+            <!--            </xpath>-->
+            <!--            <xpath expr="//header[1]" position="replace">-->
+            <!--                <field name="user_status" invisible="1"/>-->
+            <!--                <field name="has_access_to_request" invisible="1"/>-->
+            <!--                <button name="action_confirm" string="Submit" type="object"-->
+            <!--                        attrs="{'invisible': ['|', ('approver_ids', '=', []), ('request_status','!=','new')]}"-->
+            <!--                        class="btn-primary" data-hotkey="v"/>-->
+            <!--                <button name="action_approve" string="Approve" type="object"-->
+            <!--                        attrs="{'invisible':['|', ('request_status', 'in', ['approved', 'refused', 'cancel']), ('user_status','!=','pending')]}"-->
+            <!--                        data-hotkey="q"/>-->
+            <!--                <button name="action_refuse" string="Refuse" type="object"-->
+            <!--                        attrs="{'invisible':['|', ('request_status', 'in', ['approved', 'refused', 'cancel']), ('user_status','!=','pending')]}"-->
+            <!--                        data-hotkey="x"/>-->
+            <!--                <button name="action_withdraw" string="Withdraw" type="object"-->
+            <!--                        attrs="{'invisible':['|','|',('request_status','=','new'),('user_status','in',['waiting', 'pending','cancel']),('user_status','=',False)]}"-->
+            <!--                        data-hotkey="y"/>-->
+            <!--                <button name="action_draft" string="Back To Draft" type="object"-->
+            <!--                        attrs="{'invisible':['|',('request_status','!=','cancel'),'&amp;',('user_status','=',False),('has_access_to_request','=',False)]}"-->
+            <!--                        data-hotkey="w"/>-->
+            <!--                <button name="action_cancel" string="Cancel" type="object"-->
+            <!--                        attrs="{'invisible':['|',('request_status','in',['new','cancel']),'&amp;',('user_status','=',False),('has_access_to_request','=',False)]}"-->
+            <!--                        data-hotkey="z"/>-->
+            <!--                <widget name="attach_document" string="Attach Document" action="message_post"-->
+            <!--                        attrs="{'invisible': [('attachment_number', '&lt;', 1)]}"/>-->
+            <!--                <widget name="attach_document" string="Attach Document" action="message_post" highlight="1"-->
+            <!--                        attrs="{'invisible': [('attachment_number', '&gt;=', 1)]}"/>-->
+            <!--                <field name="request_status" widget="statusbar"/>-->
+            <!--            </xpath>-->
+        </field>
+    </record>
+</odoo>
+
