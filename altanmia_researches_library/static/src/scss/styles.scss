@@ -1,0 +1,142 @@
+.card{
+    border: solid 1px #ddd;
+    border-radius: 5px;
+}
+
+.research_table{
+    background: #eae6e6;
+    padding: 10px;
+}
+
+.research_card{
+    background: white;
+    padding: 10px;
+    margin: 2px;
+}
+
+.research_card .date{
+    text-align: end;
+    color: gray;
+}
+
+.research_card .keyword span{
+    border-radius: 10px;
+    padding: 3px 7px;
+    color:white
+}
+
+.document_image{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 12rem;
+    max-width: 35%;
+    min-width: 100px;
+    height: auto;
+    padding: 0.5rem !important;
+}
+
+.document_table_title{
+    background: map-get($theme-colors, 'primary');
+    color: white;
+    padding: 5px 10px 10px;
+    margin: 20px 0 0 0;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 5px 5px 0 0;
+}
+
+.documents_pager{
+    background: map-get($theme-colors, 'primary');
+    border-radius: 0 0 5px 5px;
+}
+
+.page-item.active .page-link {
+    border-color: #fff;
+}
+
+.document_table_title .search-keyword{
+    font-size: 16px;
+    font-weight: 400;
+    color: map-get($theme-colors, 'danger');
+}
+
+.document_table_title .search-result{
+    font-size: 16px;
+    font-weight: 400;
+    color: #e2e2d7;
+}
+
+.table-document .first_td{
+    width: 20%;
+    font-weight: 600;
+}
+
+.filter-form{
+    background-color: white;
+    color:#455351;
+}
+
+.filter-form > hr{
+    margin: 5px;
+    border: 2px solid gray;
+    border-radius: 30px;
+}
+
+.filter-form .filter-condition{
+    border: 0.5px solid #e6e4e4;
+    margin: 0px 20px;
+    padding: 5px;
+}
+
+.filter-form .or_condition .filter-condition{
+    border: none;
+}
+
+.filter-form .or {
+    border: none;
+    padding-inline-start: 30px;
+}
+
+.filter-form .or .or-btn{
+    display: none;
+}
+
+.table-document .b-left{
+    border-left: 2px map-get($theme-colors, 'primary');
+}
+
+.table-document .doc_name{
+    color: map-get($theme-colors, 'primary');
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.groupby-bar{
+    background: map-get($theme-colors, 'secondary');
+    color: whitesmoke;
+    padding: 5px 20px;
+    margin-bottom: 1px;
+}
+
+.university-search-bar {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: map-get($theme-colors, 'primary');
+    color: whitesmoke; 
+    margin: 16px;
+    border-radius: 5px;
+}
+
+.hide{
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+     overflow-y: auto;
+}
+
+.show{
+    max-height: 1500px;
+    transition: max-height 1s ease-in;
+}

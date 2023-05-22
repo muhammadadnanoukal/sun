@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="arbitration_view_list" model="ir.ui.view">
+            <field name="name">قائمة التحكيم</field>
+            <field name="model">researches.arbitration</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="arbitrator"/>
+                    <field name="rate"/>
+                    <field name="opinion"/>
+                </tree>
+            </field>
+    </record>
+
+    <record id="arbitration_view_form" model="ir.ui.view">
+        <field name="name">التحكيم</field>
+        <field name="model">researches.arbitration</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="arbitrator" />
+                        <field name="rate" />
+                        <field name="opinion" placeholder="أدخل هنا" options="{'resizable':true}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

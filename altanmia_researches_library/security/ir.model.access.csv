@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_documents_base_group_user,documents_base_group_user,documents.model_documents_document,base.group_user,1,1,1,0
+access_arbitration_base_group_user,arbitrations_base_group_user,model_researches_arbitration,base.group_user,1,1,1,0
+access_keyword_base_group_user,keyword_base_group_user,model_researches_keyword,base.group_user,1,1,1,0
+access_documents_base_public_user,documents_base_public_user,documents.model_documents_document,base.group_public,1,0,0,0
+access_documents_base_portal_user,documents_base_portal_user,documents.model_documents_document,base.group_portal,1,0,0,0
+access_arbitration_base_public_user,arbitrations_base_public_user,model_researches_arbitration,,1,0,0,0
+access_keyword_base_public_user,keyword_base_public_user,model_researches_keyword,,1,0,0,0
+access_partner_base_public_user,partner_base_public_user,base.model_res_partner,,1,0,0,0
+
+
+
+
+
+
+
