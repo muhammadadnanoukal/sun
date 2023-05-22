@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="researches_keyword_tree" model="ir.ui.view">
+        <field name="name">researches.keyword.tree</field>
+        <field name="model">researches.keyword</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="name" string="Keyword" optional="show"/>
+                <field name="color" widget="color_picker" optional="show"/>
+                <field name="active" optional="show"/>
+            </tree>
+        </field>
+    </record> 
+
+    <record id="researches_keyword_form" model="ir.ui.view">
+        <field name="name">researches.keyword.form</field>
+        <field name="model">researches.keyword</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" string="Tag"/>
+
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                        <group>
+                            <field name="color" widget="color_picker"/>
+                            <!-- <field name="color_2" widget="color" /> -->
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_keyword_show" model="ir.actions.act_window">
+        <field name="name">Keywords</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">researches.keyword</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new Keyword
+          </p><p>
+            Odoo helps you track all activities related to your contacts.
+          </p>
+        </field>
+    </record>
+</odoo>

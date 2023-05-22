@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_university_colleges_show" model="ir.actions.act_window">
+        <field name="name">الكليات</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="search_view_id" ref="base.view_res_partner_filter"/>
+        <field name="context">{'default_is_university': True, 'default_is_company': True, 'default_parent_id': active_id}</field>
+        <field name="domain">[('is_university','=',True),('parent_id','=',active_id)]</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            أنشئ كلية ضمن هذه الجامعة
+          </p>
+        </field>
+    </record>
+    
+    <record id="action_college_departments_show" model="ir.actions.act_window">
+        <field name="name">الأقسام</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="search_view_id" ref="base.view_res_partner_filter"/>
+        <field name="context">{'default_is_university': True, 'default_is_company': True, 'default_parent_id': active_id}</field>
+        <field name="domain">[('is_university','=',True),('parent_id','=',active_id)]</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            أنشئ قسم ضمن هذه الكلية
+          </p>
+        </field>
+    </record>
+
+    <record id="action_university_show" model="ir.actions.act_window">
+        <field name="name">الجامعات</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="search_view_id" ref="base.view_res_partner_filter"/>
+        <field name="context">{'default_is_university': True, 'default_is_company': True}</field>
+        <field name="domain">[('is_university','=',True),('parent_id','=',False)]</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            أنشئ جامعة
+          </p>
+        </field>
+    </record>
+
+    <record id="contact_hide_un_fields_view_form" model="ir.ui.view">
+        <field name="name">contact.hide.un.fields.view.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_type']" position="before">
+                <field name="is_university" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//field[@name='company_type']" position="attributes">
+                <attribute name="attrs">{'invisible': [('is_university', '=', True)],}</attribute>
+            </xpath>
+
+            <xpath expr="//div[@name='button_box']" position="attributes">
+                <attribute name="attrs">{'invisible': [('is_university', '=', True)],}</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='sales_purchases']" position="attributes">
+                <attribute name="attrs">{'invisible': [('is_university', '=', True)],}</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='parent_id']" position="attributes">
+                <attribute name="attrs">{'invisible': [('is_university', '=', True)],}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="university_type" attrs="{'invisible': [('parent_id', '!=', False)],}"/>
+            </xpath>
+
+            <xpath expr="//div[@name='button_box']" position="after">
+                <field name="tree_depth" invisible='1'/>
+                <div attrs="{'invisible':[('is_university','=',False)]}"
+                     class="o-form-buttonbox oe_button_box position-relative text-end o_not_full"
+                     name="button_box_1">
+                    <button attrs="{'invisible': [('tree_depth','!=',1)],}"
+                            class="oe_stat_button" type="action" 
+                            name="%(action_university_colleges_show)d"  icon="fa-book">
+                        <span>الكليات</span><field string='*'  name="children_count" widget="statinfo"/>
+                    </button>
+
+                    <button attrs="{'invisible': [('tree_depth','!=',2)],}"
+                            class="oe_stat_button" type="action" 
+                            name="%(action_college_departments_show)d"  icon="fa-book">
+                        <span>الأقسام</span><field string='*'  name="children_count" widget="statinfo"/>
+                    </button>
+
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
