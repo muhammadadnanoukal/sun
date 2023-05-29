@@ -71,6 +71,7 @@
             </xpath>
             <xpath expr="//field[@name='vat']" position="after">
                 <field name="university_type" attrs="{'invisible': [('parent_id', '!=', False)],}"/>
+                <field name="parent_id" string="Parent" domain="[('is_university', '=', True)]"/>
             </xpath>
 
             <xpath expr="//div[@name='button_box']" position="after">

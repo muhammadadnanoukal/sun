@@ -10,7 +10,6 @@ class University(models.Model):
 
         hierarchical_naming = self.env.context.get('path', True)
         internation_dep = self.env.context.get("international", False)
-        print("context", self.env.context, internation_dep)
         for record in self:
             if hierarchical_naming and record.parent_id and not internation_dep:
                 node = record.parent_id
@@ -37,7 +36,7 @@ class University(models.Model):
     @api.constrains('university_type', 'parent_id')
     def _check_university_type_required(self):
         for record in self:
-            if not record.parent_id and not record.university_type:
+            if record.is_university and not record.parent_id and not record.university_type:
                 raise ValidationError("Catalog type is required.")
 
     description = fields.Html(string="Description", translate=True)
@@ -50,7 +49,10 @@ class University(models.Model):
 
     def _compute_research_count(self):
         for rec in self:
-            rec.research_count = rec.env['documents.document'].search_count([('related_id', 'in', rec.get_children_ids())])
+            rec.research_count = rec.env['documents.document'].search_count([
+                ('related_id', 'in', rec.get_children_ids()),
+                ('is_research','=',True),
+                ('is_published','=',True)])
 
     def _compute_children_count(self):
         self.children_count = len(self.child_ids)
@@ -76,3 +78,11 @@ class University(models.Model):
             vals['university_type'] = parent.university_type
 
         return super().create(vals)
+
+    def write(self, vals):
+        res = super(University, self).write(vals)
+        if 'university_type' in vals:
+            for child in self.child_ids:
+                child.write({'university_type': self.university_type})
+                print("set child catalog", child.university_type)
+        return res

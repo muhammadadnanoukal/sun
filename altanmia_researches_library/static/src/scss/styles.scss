@@ -140,3 +140,24 @@
     max-height: 1500px;
     transition: max-height 1s ease-in;
 }
+
+.back-menu button{
+    font-size:0.9rem;
+    color: black !important;
+}
+.back-menu ul{
+    right: auto !important;
+}
+
+.back-menu ul li a{
+    color: black !important;
+    font-weight: 400;
+}
+
+.back-menu ul li a .selected{
+    color: map-get($theme-colors, 'primary') !important;
+}
+
+.back-menu ul li a:hover{
+    color: map-get($theme-colors, 'primary') !important;
+}

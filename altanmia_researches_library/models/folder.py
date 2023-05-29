@@ -1,13 +1,13 @@
 import base64
 import json
-
+import logging
 from odoo import api, fields, models, tools, _
 from odoo.exceptions import ValidationError
 from odoo.modules.module import get_module_resource
 from odoo.addons.http_routing.models.ir_http import slug
 from odoo.osv import expression
 from collections import OrderedDict
-
+logger = logging.getLogger(__name__)
 
 class Folder(models.Model):
     _name= 'documents.folder'
@@ -50,6 +50,15 @@ class Document(models.Model):
         'website.published.mixin',
     ]
 
+    def _get_related(self):
+        try:
+            action = self.env.ref("altanmia_researches_library.researches_action")
+            context = action.context.lower().replace("'", "\"")
+            context = json.loads(context)
+            return context.get("default_related_id", False)
+        except ValueError as e:
+            logger.error(e.msg)
+
     is_published = fields.Boolean(
         string='نشر على مكتبة الأبحاث', default=False,  # force None to avoid default computation from mixin
         readonly=False, store=True)
@@ -61,7 +70,7 @@ class Document(models.Model):
     #                                    string="مصدر الابحاث", default='internal')
 
 
-    related_id = fields.Many2one('res.partner', string='تابعة لـ', index=True, required=True)
+    related_id = fields.Many2one('res.partner', string='تابعة لـ', index=True, required=True, default=_get_related)
     arbitration_ids = fields.One2many('researches.arbitration', 'research_id', string="التحكيم")
 
     research_domain =fields.Char(related='related_id.name')
@@ -127,25 +136,6 @@ class Document(models.Model):
         default = default if default is not None else {}
         default['is_published'] = False
         return super().copy(default)
-
-    # @api.model
-    # def _get_view(self, views, options=None):
-    #     res = super()._get_view(views, options)
-    #     action = self.env.ref("altanmia_researches_library.researches_action")
-    #     context = action.context.lower().replace("'", "\"")
-    #     context = json.loads(context)
-    #     self = self.with_context(context)
-    #     print("field get context", self.env.context)
-    #
-    #     return res
-
-    # def onchange(self, values, field_name, field_onchange):
-    #     action = self.env.ref("altanmia_researches_library.researches_action")
-    #     context = action.context.lower().replace("'", "\"")
-    #     context = json.loads(context)
-    #     self = self.with_context(cont=False)
-    #     print("onchange called")
-    #     return super().onchange(values, field_name, field_onchange)
     
     @api.model
     def create(self, vals):
@@ -154,26 +144,30 @@ class Document(models.Model):
             folder = self.env['documents.folder'].create({'name':'مجلد الأبحاث', 'is_research':True})
         
         vals['folder_id'] = folder.id
-        print('cntx',self.env.context)
 
         return super().create(vals)
 
-    # @api.model
-    # def web_search_read(self, domain=None, fields=None, offset=0, limit=None, order=None, count_limit=None):
-    #     action = self.env.ref("altanmia_researches_library.researches_action")
-    #
-    #     sel_folder = False
-    #     for cond in domain:
-    #         if cond[0] == 'related_id' and cond[1] == 'child_of':
-    #             sel_folder = cond[2]
-    #             break
-    #     if sel_folder:
-    #         context = action.context.lower().replace("'", "\"")
-    #         context = json.loads(context)
-    #         context["default_related_id"] = sel_folder
-    #         action.write({'context': context})
-    #
-    #     return super(Document, self).web_search_read(domain, fields, offset, limit, order, count_limit)
+    @api.model
+    def web_search_read(self, domain=None, fields=None, offset=0, limit=None, order=None, count_limit=None):
+        try:
+            action = self.env.ref("altanmia_researches_library.researches_action")
+
+            sel_folder = False
+            for cond in domain:
+                if cond[0] == 'related_id' and cond[1] == 'child_of':
+                    sel_folder = cond[2]
+                    break
+            self.related_id = self.env['res.partner'].browse(sel_folder)
+            if sel_folder:
+                context = action.context.lower().replace("'", "\"")
+                context = json.loads(context)
+                context["default_related_id"] = sel_folder
+                action.write({'context': context})
+
+        except ValueError as e:
+            logger.error(e.msg)
+
+        return super(Document, self).web_search_read(domain, fields, offset, limit, order, count_limit)
 
     @api.model
     def search_panel_select_range(self, field_name, **kwargs):
