@@ -43,5 +43,12 @@
             <field name="sequence">5</field>
         </record>
 
+        <record id="web_menu_researches_general_search" model="website.menu">
+            <field name="name">General Search</field>
+            <field name="url">/researches</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence">6</field>
+        </record>
+
     </data>
 </odoo>

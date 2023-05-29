@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.false_6035ff8d-e7db-4d28-9da1-5cb769fa4b95" model="ir.actions.act_window.view" context="{'studio': True}">
+    <field name="act_window_id" ref="stock.action_location_form"/>
+    <field name="multi" eval="False"/>
+    <field name="sequence">3</field>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">kanban</field>
+  </record>
+  <record id="studio_customization.false_7a290bab-efc1-4e98-9550-051fbe03596f" model="ir.actions.act_window.view" context="{'studio': True}">
+    <field name="act_window_id" ref="stock.action_routes_form"/>
+    <field name="multi" eval="False"/>
+    <field name="sequence">2</field>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">form</field>
+  </record>
+  <record id="studio_customization.false_c0a9a5d1-9e06-4ec7-a288-8cc6e0969b7c" model="ir.actions.act_window.view" context="{'studio': True}">
+    <field name="act_window_id" ref="stock.action_location_form"/>
+    <field name="multi" eval="False"/>
+    <field name="sequence">2</field>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">gantt</field>
+  </record>
+  <record id="studio_customization.false_e59ec352-b4dd-4111-aa09-356c24d29168" model="ir.actions.act_window.view" context="{'studio': True}">
+    <field name="act_window_id" ref="stock.action_location_form"/>
+    <field name="multi" eval="False"/>
+    <field name="sequence">1</field>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">form</field>
+  </record>
+  <record id="studio_customization.false_e6414f78-e1aa-42e9-866c-19e9e386db0c" model="ir.actions.act_window.view" context="{'studio': True}">
+    <field name="act_window_id" ref="stock.action_routes_form"/>
+    <field name="multi" eval="False"/>
+    <field name="sequence">1</field>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">kanban</field>
+  </record>
+  <record id="studio_customization.stock_location_route_9ba2bb7c-3888-453c-b926-bdcdc504143e" model="ir.actions.act_window.view" context="{'studio': True}">
+    <field name="act_window_id" ref="stock.action_routes_form"/>
+    <field name="multi" eval="False"/>
+    <field name="sequence" eval="False"/>
+    <field name="view_id" ref="stock.stock_location_route_tree"/>
+    <field name="view_mode">tree</field>
+  </record>
+  <record id="studio_customization.stock_location_tree_bf3bda81-51b6-4cf2-b961-2ed170be2b57" model="ir.actions.act_window.view" context="{'studio': True}">
+    <field name="act_window_id" ref="stock.action_location_form"/>
+    <field name="multi" eval="False"/>
+    <field name="sequence" eval="False"/>
+    <field name="view_id" ref="stock.view_location_tree2"/>
+    <field name="view_mode">tree</field>
+  </record>
+</odoo>

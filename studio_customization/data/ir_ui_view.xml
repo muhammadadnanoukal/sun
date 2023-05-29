@@ -1,0 +1,2017 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="base.user_groups_view" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <field name="groups_id" position="after"/>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="base.view_users_form"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">res.users</field>
+    <field name="name">res.users.groups</field>
+    <field name="priority">16</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.default_form_view_fo_17b6f070-bd96-4e31-ba64-85cbaad89c28" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <form>
+        <header/>
+        <sheet string="Quality Check  Lines">
+          <div class="oe_title">
+            <h1>
+              <field name="x_name" required="1" placeholder="Name..."/>
+            </h1>
+          </div>
+          <group name="studio_group_165fb5">
+            <group name="studio_group_165fb5_left"/>
+            <group name="studio_group_165fb5_right"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_quality_check_line_ab55a</field>
+    <field name="name">Default form view for x_quality_check_line_ab55a</field>
+    <field name="priority">16</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.default_form_view_fo_61aa2766-e377-451a-9525-6dbd77642485" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <form>
+        <header/>
+        <sheet string="Classification">
+          <widget name="web_ribbon" text="Archived" bg_color="bg-danger" attrs="{'invisible': [('x_active', '=', True)]}"/>
+          <field name="x_active" invisible="1"/>
+          <div class="oe_title">
+            <h1>
+              <field name="x_name" required="1" placeholder="Name..."/>
+            </h1>
+          </div>
+          <group name="studio_group_2bcbab">
+            <group name="studio_group_2bcbab_left"/>
+            <group name="studio_group_2bcbab_right"/>
+          </group>
+        </sheet>
+        <div class="oe_chatter" name="oe_chatter">
+          <field name="message_follower_ids"/>
+          <field name="message_ids"/>
+          <field name="activity_ids"/>
+        </div>
+      </form>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_classification</field>
+    <field name="name">Default form view for x_classification</field>
+    <field name="priority">16</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.default_form_view_fo_be129d54-ba77-49e6-a47d-d6b41022583c" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <form>
+        <header/>
+        <sheet string="Quality Check  Lines">
+          <div class="oe_title">
+            <h1>
+              <field name="x_name" required="1" placeholder="Name..."/>
+            </h1>
+          </div>
+          <group name="studio_group_185956">
+            <group name="studio_group_185956_left"/>
+            <group name="studio_group_185956_right"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_quality_check_line_ab55a</field>
+    <field name="name">Default form view for x_quality_check_line_ab55a</field>
+    <field name="priority">16</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.default_gantt_view_f_f4e45257-0112-420e-9bbb-a9c452197fa2" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <gantt date_start="create_date" date_stop="create_date" string="Default gantt view for stock.location"/>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">stock.location</field>
+    <field name="name">Default gantt view for stock.location</field>
+    <field name="priority">16</field>
+    <field name="type">gantt</field>
+  </record>
+  <record id="studio_customization.default_graph_view_f_e147cb7a-e1f8-465b-b180-681f2e198928" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <graph string="Stock Rule" sample="1">
+        <field name="name" modifiers="{&quot;required&quot;: true}"/>
+      </graph>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">stock.rule</field>
+    <field name="name">Default graph view for ir.model(484,)</field>
+    <field name="priority">16</field>
+    <field name="type">graph</field>
+  </record>
+  <record id="studio_customization.default_kanban_view__3078bddb-9dde-48f0-a98f-556c2261c401" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <kanban string="Inventory Routes">
+        <templates>
+          <t t-name="kanban-box">
+            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+              <div class="o_kanban_card_content">
+                <field name="name" modifiers="{&quot;required&quot;: true}"/>
+              </div>
+            </div>
+          </t>
+        </templates>
+      </kanban>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">stock.route</field>
+    <field name="name">Default kanban view for ir.model(481,)</field>
+    <field name="priority">16</field>
+    <field name="type">kanban</field>
+  </record>
+  <record id="studio_customization.default_kanban_view__b7808093-1cf1-4375-8f84-be01e7d6a4f1" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <kanban string="Inventory Locations">
+        <templates>
+          <t t-name="kanban-box">
+            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+              <div class="o_kanban_card_content">
+                <field name="complete_name" on_change="1" modifiers="{&quot;readonly&quot;: true}"/>
+              </div>
+            </div>
+          </t>
+        </templates>
+      </kanban>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">stock.location</field>
+    <field name="name">Default kanban view for ir.model(480,)</field>
+    <field name="priority">16</field>
+    <field name="type">kanban</field>
+  </record>
+  <record id="studio_customization.default_list_view_fo_43e8ffd5-30eb-4674-874b-ff8495ffd64f" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="x_studio_sequence" widget="handle"/>
+        <field name="x_name"/>
+      </tree>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_quality_check_line_ab55a</field>
+    <field name="name">Default list view for x_quality_check_line_ab55a</field>
+    <field name="priority">16</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.default_list_view_fo_5f439bc5-af87-4766-ad76-3a7d722c61d7" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <tree editable="bottom">
+        <field name="x_studio_sequence" widget="handle"/>
+        <field name="x_name"/>
+      </tree>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_quality_check_line_ab55a</field>
+    <field name="name">Default list view for x_quality_check_line_ab55a</field>
+    <field name="priority">16</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.default_list_view_fo_ccdfab77-69f2-4607-a68d-dcdb3dae1046" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="x_studio_sequence" widget="handle"/>
+        <field name="x_name"/>
+      </tree>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_classification</field>
+    <field name="name">Default list view for x_classification</field>
+    <field name="priority">16</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.default_search_view__7c407bc8-9d23-45e6-83d2-9e24586c701c" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <search>
+        <field name="x_name"/>
+      </search>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_quality_check_line_ab55a</field>
+    <field name="name">Default search view for x_quality_check_line_ab55a</field>
+    <field name="priority">16</field>
+    <field name="type">search</field>
+  </record>
+  <record id="studio_customization.default_search_view__9b8f4dca-3555-41f0-9691-e6cad9ffce77" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <search>
+        <field name="x_name"/>
+        <separator/>
+        <filter string="Archived" name="archived_x_classification" domain="[['x_active', '=', False]]"/>
+        <separator/>
+      </search>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_classification</field>
+    <field name="name">Default search view for x_classification</field>
+    <field name="priority">16</field>
+    <field name="type">search</field>
+  </record>
+  <record id="studio_customization.default_search_view__e60df21e-e256-4a47-b6f0-47ba3783f1a3" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <search>
+        <field name="x_name"/>
+      </search>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_quality_check_line_ab55a</field>
+    <field name="name">Default search view for x_quality_check_line_ab55a</field>
+    <field name="priority">16</field>
+    <field name="type">search</field>
+  </record>
+  <record id="studio_customization.mrp_production_repor_2e48dd51-355b-4771-802d-0bca3f0e294d" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <t t-name="mrp_production_report.mrp_production_report_id_copy_2">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="o">
+            <t t-call="web.basic_layout">
+              <div class="content" dir="LTR" style="font-size: 9pt;">
+                <div style="font-size: 8pt; color: white; font-wight: bold; background-color: grey;">
+                  <center style="word-spacing: 70px;">
+                    <p>www.batec-gb.com info@batec-gb.com</p>
+                  </center>
+                </div>
+                <p>
+                  <img style=" margin-left: 40px; max-width: 50%" src="data:image/jpeg;base64,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"/>
+                </p>
+                <table class="table table-borderless" style="width:100%">
+                  <tr>
+                    <td>
+                      <div style="text-align: center;">
+                                            PLT<span style="margin-right: 10px;"/>(NO.
+                                            <span style="color: red;" t-field="o.lot_producing_id"/>
+                                            )
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div>
+                                            P.D<span style="margin-right: 40px;"/>:
+                                            <span style="margin-right: 20px;"/>
+                                            <span t-if="o.date_finished"><span t-esc="o.date_finished.strftime('%d/%m/%Y')"/></span>
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div>
+                                            P.S<span style="margin-right: 41px;"/>:
+                                            <span style="margin-right: 20px;"/>
+                                            <span t-if="o.date_finished"><span t-if="o.date_finished and o.date_finished.hour &gt; 20 or o.date_finished.hour &lt; 8">
+                                                    Night
+                                                </span><span t-else="">
+                                                    Day
+                                                </span></span>
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div>
+                                            P.T<span style="margin-right: 41px;"/>:
+                                            <span style="margin-right: 20px;"/>
+                                            <span t-if="o.date_finished"><span t-esc="o.date_finished.strftime('%H:%M:%S')"/></span>
+
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div>
+                                            P.TYP<span style="margin-right: 25px;"/>:
+                                            <span style="margin-right: 20px;"/>
+                                            <span t-field="o.print_barcode"/>
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div>
+                                            SHT/PLT<span style="margin-right: 11px;"/>:
+                                            <span style="margin-right: 20px;"/>
+                                            <span t-field="o.sheet_pallet"/>
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div>
+                                            Q.INSP<span style="margin-right: 19px;"/>:
+                                            <span style="margin-right: 20px;"/>
+                                            <span t-field="o.inspector"/>
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div>
+                                            P.OPR<span style="margin-right: 24px;"/>:
+                                            <span style="margin-right: 20px;"/>
+                                            <span t-field="o.user_id"/>
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div style="text-align: left;">
+                        <t t-if="o.note">
+                          <span t-field="o.note"/>
+                        </t>
+                        <t t-else="">
+                          <p style="color: white">NOTE</p>
+                        </t>
+                      </div>
+                      <div style="font-size: 6pt; margin-top: -15px">
+                                            ............................................................................................................................................
+                                        </div>
+                    </td>
+                  </tr>
+                </table>
+                <t t-if="o.print_barcode and not o.lot_producing_id.name">
+                  <t t-set="merge_barcode" t-value="o.print_barcode"/>
+                </t>
+                <t t-if="o.lot_producing_id.name and not o.print_barcode">
+                  <t t-set="merge_barcode" t-value="o.lot_producing_id.name"/>
+                </t>
+                <t t-if="o.print_barcode and o.lot_producing_id.name">
+                  <t t-set="merge_barcode" t-value="o.print_barcode + o.lot_producing_id.name"/>
+                </t>
+                <center>
+                  <t t-if="merge_barcode">
+                    <div style="margin-top: 25px" t-esc="merge_barcode" t-options="{'widget': 'barcode',  'img_style': 'max-height:50pt; max-width:100%;', 'img_align': 'center'}"/>
+                    <div style="font-size: 8pt; color: white; font-wight: bold; background-color: grey; width: 100%;">
+                      <p style="margin-left: 5px">Batec Batiment technique</p>
+                    </div>
+                  </t>
+                  <t t-else="">
+                    <div style="margin-top: 2px">
+                      <br/>
+                      <br/>
+                      <br/>
+                      <br/>
+                      <br/>
+                      <div style="font-size: 8pt; color: white; font-wight: bold; background-color: grey; width: 100%;">
+                        <p style="margin-left: 5px; text-align: left;">Batec Batiment technique</p>
+                      </div>
+                    </div>
+                  </t>
+                </center>
+              </div>
+            </t>
+          </t>
+        </t>
+      </t>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key">mrp_production_report.mrp_production_report_id_copy_2</field>
+    <field name="mode">primary</field>
+    <field name="model" eval="False"/>
+    <field name="name">mrp_production_report.mrp_production_report_id copy(2)</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.mrp_production_repor_462a9f7b-2fb0-4961-a470-6237d195c59e" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <t t-name="mrp_production_report.mrp_production_report_id_copy_1">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="o">
+            <t t-call="web.basic_layout">
+              <div class="content" dir="LTR" style="font-size: 9pt;">
+                <div style="font-size: 8pt; color: white; font-wight: bold; background-color: grey;">
+                  <center style="word-spacing: 70px;">
+                    <p>www.batec-gb.com info@batec-gb.com</p>
+                  </center>
+                </div>
+                <p>
+                  <img style=" margin-left: 40px; max-width: 50%" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCACpAfQDASIAAhEBAxEB/8QAHQABAAEFAQEBAAAAAAAAAAAAAAgBBQYHCQIDBP/EAGIQAAECBQAFBAgNDwUQAgMAAAECAwAEBQYRBwgSITETQVFxFiIzYXKBldIJFBcYGTJSVleRkrHTFSM2NzhCU3R1gpOUobK0JDRDY6IlJjVERVRVYmVzdoOjs8HhhdHC8PH/xAAcAQEAAgMBAQEAAAAAAAAAAAAAAQcEBQYIAwL/xABEEQABAgQBBggLBwQCAwAAAAABAAIDBAURMQYhQVFxkRJhgZKhsdHhBxMUFRYXIlJTcsEyNDVUsuLwM2JzokKCQ0TC/9oADAMBAAIRAxEAPwDDHtaDWHS84lOmG4gAogDba6fAjz66HWI+GK4vlteZGspju7nhn548RWnlUx77t5XpsUqQt/QZzG9i2h66HWI+GK4vlteZD10OsR8MVxfLa8yNXwh5VMe+7eVPmqQ+AzmN7FtD10OsR8MVxfLa8yHrodYj4Yri+W15kavhDyqY9928p5qkPgM5jexbQ9dDrEfDFcXy2vMh66HWI+GK4vlteZGr4Q8qmPiO3lPNUh8BnMb2LcNK1wNZSj49LaU5yYGTunpKWmM/Kbz+2Nn2j6I1pXpS0t3nZ9v19jgpcqXJF/iN/FaDuzu2U8eMRPhH0h1CahG7Yh3361iTOTlJmhaLLs5AGne2xXUfRPrqaFdKDzFJmaq7a9bfIQmQrGy2l1ZHBp8Etr6AMhR6I33HDtaEOJKHEJUk8QoZBiRurfrkXdodmJW172mJu4LJyloIWS7OUtHDaYUTlxsDi0eAHaEe1O+kcoCSGTQ5R9R2blwVd8HoYwx6USbf8D/8n6HfoXTeEW+3rgol10SSuS26mxUaZUmUzErNMK2kOtqGQQf/ABxB3HfFwjqAQ4XCq1zXMcWuFiEi1XXXWbYtqp3A/jZkJVx4D3SgO1T1lWB44usad1krhErb1PtdlY5SpzAffT/UtYVv61lHxGJX5WqU6WtJuyCu9Jza58NM4z3u04RUaWdJXA3nPfo2fMjE+O7j0QOccMxCLK1aXNJrY227wnFqR2yUqaZwojfg4RnB4GJU0GsS1wUSQrkmfrM/LtzCO8FJBwe+M4iFe7px44kVq5XD9ULSmreeWC7RplQbGd/IO5Wn4lFY8QgEWJ6XLv0h2jfM1ISF1TrEhNtNzcmgNtFKUkbK0glBJwtJ5+ChGHeqzpKzjsznujuTP0cbW1kbfE1btPuhpB5SlTPIvEfgHsJ39Sw38ZiPu/eCYIsr9VnSVzXnPfo2fMgdLOkr36T36NjzIxMdXGK7t3STBFlY0s6S/flPfo2fMh6rOkvH2Zzx/wCUz9HGJjv4PRDeDuIEEWWeqzpL9+c9+iZ8yB0s6S/fnPfo2fo4xMDp5oEcMQRZb6rGkrBPZpPbv6tnzIeqzpK4G857hx5JnzIxLngDz/NBFlnqsaS/fnPfo2fMivqs6Ss47Mp79Ez5kYlk7zuioOTx3dcEWWHSzpKGc3nPfo2fo4vFl6TtIFQvKg06euycflpqoNMvNKbaAWgneDhAP7Y11xOOMX7R/wDZ/bPeqrHzwRTDcJDaiDggGIjs6W9Ji2kKN5zxKgD3Jnj8iJcO9yX4JiDUr/N2wfciCLMPVZ0l+/Od/RM/RxUaWdJWMm857fu7mz5kYmTw589MDkE4O8wRZX6rOkvibzngP90z5kPVZ0l8ezOdx/u2fo4xTPDfu6YpzbsboIss9VnSV79J39Gx5kV9VjSXzXnPH/lM/RxiW/HMRFFB0gpZQVurIQ2gD2yycJA6yQIIpMaCapddwUCer9z1uZn0PzXISaXUoAShsYUobKRxWVDf7gRsyLPZ1Abta1qXb7WD6SlkNrV7pzGVq8aiT44vESij9rtaX6xom0QoFq1d6m3DcNQZp8jMsFPKsITl19xO0CO5tlGcbi4DEDvXQ6xPwxXF8trzI2T6IFpAN1abGbPlXyqTs6noYWkcPTcwA64esN8gPj74iM0cNVp6K+bcIbiAM2Y6selXtkjQpaBSYbpiE1z3+0btBNjhiNVjtJW0PXQ6xHwxXF8tr6OJOahml3SfpGvi66ffd81SuS0nSpd5hqbUgpbWXSCobKQc43RBOJfehr/bDvT8jS3/AH1R+KXMRnzkNrnki+s6l9cq6dJwaNHfDgtBAFiGgH7Q02XQSEIR3ioRI/LVKrTKHTpir1qoy0hIyjZdmJmZdS000gcVKWogJA6SYxDTBplsjQjabl13rPqQhSi1JybAC5mefwSGmkc53bycJSN5IEcxNOOsRpF091VTt0zgkqEy6VyNBlVn0swPvVOHdy7uPv1DA37KUgxq6hVYUgODi/V2rqsnclJqvO8Z9iEMXHTxNGk9A6FLzSt6IfYVuPu0rRZQ3bumW9xn3VmWkAf9VRHKO8+9KQnhhRzEYbz1zNYq9HV7V8igSyj2stQ5ZMuE97lFbTp8ao0nCORmKrNzJ9p9hqGb+cqt6nZJ0mmtHAhBztbvaPTmHIArxVL1vauLC63elfqJGcCaqTzoTnjgKVgeKLWJmYSQpMw4kpIIIWRgx84Rry4nOV0DYbGCzQAFkFG0i6RLdUlVA0gXJTthQWlMvU3koChwOxtbOfFG3bI15NYSznG0T9wSV0yaeLFYlRyhGd+HmtleevaA6I0FCPtCmY0A3hvI5VhzVLkZ0cGYgtdtAvvxXSPRLr96Kr5fapF9y7lkVR0hKFzjwdkHFHmEyAAg5/CJQOG/JxEnGXmZhlExLuodacSFoWhQUlSTvBBHERw/IBBBGQdxB543Zq861V96B56WpLjr9cssrxMUZ1eVy6SclyUWo/W1DeeTJ2Fb/ak7Q6CRygcCGTWcax9R2Kvq74PYbmmNSjY+4TmPyk5weI32hdV4Rjmj7SFaWlG1JK9LKqzc/TJ5ParTuW0se2bcTxQtJ3FJ3j4oyOOqa5r2hzTcFVPFhPgvMOILOGYg4gpCEI/S/C4gTHd3PDPzx4j2/wB3c8M/PHiKtK9VDBIQi7Wpady3zX5a1bPo71Vq84FqYlGSkLcCElSyCogbkgneeaABcbDFQ97YbS95sBnJOACtMI2x607WS+CGrfp5f6SHrTtZL4Iqt+nl/pI+/ksx8N24rA87078wznt7VqaKxtj1p2sl8EVW/Ty/0kfGa1WNYySYVMv6IK4pCcZDJZdX4koWVH4oeSx/cO4qRVqeTYR2c9vatWwi43DbVy2jP/Uq7bbqlDnTwYqMouXWrwdsDaHfTmLdHwIINis5rmvaHNNwUhCEQv0pUaimsDNWLeLOiK5p9arbuaY2aYXVZTIVFR3IST7Vt47tkbg4UkY21GOjUcPUrfaWh6VfWw+0pLjTqDhTbiTlK0nmIIBB6RHYLQFpIVpZ0QWxfUwAmdn5JCZ9ITshM232j2B0FaVEd4iOuyenDEaZZ5wzjZq5FUHhDozZeKypQRYPzO+bQeUXvsviVsCIpaZrgNxaRKiptzal6WE05nfu7Te4R3+UUofmjoiS9215m17ZqdwP4KZGWW6En75YHap6yrA8cQyC3nMvTLhcecUXHVk5KlqOVHxkmOlVZqo3njFP/wCwP/kxUDG/m4xCKnHf34z7QdcRoOkKUlnXAmXrLapFzJwOUxttHr2klI8OMBz0R6Q/MSjrU7Jq2JiWcQ+wrocQQpJ+MCCKZt00Ji5rcqVvzGNiflnGcke1UR2qusHB8UQwU28wtbE0gofZWpp1JHtVpJCh4iDE07drMvcVBp9dle5T8s3MJHOnaSDg98cD1RoLSXoivKYvmp1G2LeVO0+oKTNpW2+0jYdUPricLUDnaBVwx28Si1Sdx4xXoUDnvxl/qP6Ufea/+tS/nw9R/SgeNmv/AK1L+fEIsPxjd+2K5OOnBjLhoe0o+81/9al/pIxaclJqnTj9OnmCxNSrhZeaVglCxxG7cfFBF8d//qB5lHMBv5+qKgnm3boIm/x9UBwGOcR9ZOTmajNy9OkGFPTU24lllsEArWrgnJwB490ZV6j+lH3mv/rUv58EWH5wcEjqh4gcRmHqP6Uc/Ya/+ty/nw9R/Sh7zH/1qX8+CLD8jIPzRfrAIN/2zjP+FWPni5eo/pR95r/61L/SRd7M0V6RadeVCqdQtR5iVlKg0886ZlghCAd5wFknxQRSad7kvwTEGpbHpdvOfaiJyu9yX4JiDUtul0Hd7URKL6kbhz5hu4c0UIA5oruJwBgCIRUzv4cIqCDuxH7qLQqxctQFKoEgudnS2p0NJWlPaJxtHKiBuyOfnjIfUf0o81mv/rUv9JBFh5Hf/wDcZloft/sj0iUxhxAVL08mpPg8PreNj/qKQfEY8+o/pR49hr+fxqX+kjb2gewKzaUpVanclNMnPzrqGW21OIWQw2Mg5SSN6lK3Z+9EEW1Y/BcFcp1s0Go3JV3wzI0qUenZlw8ENNoK1nxAGP3xpPXBpmkS49CVSs/RpbU5WalcEwzITCJZxCFMyhJW8slZAwQjk8A5+udGY+UxEMGE6IBcgLMp8s2cm4cB7g1rnAEk2AF85udQXLu57mn71uasXlVMicr0+/Unk5zsKdWV7HUkEJHeEW2NsetO1kvghq36eX+kinrTtZL4Iat+nl/pIrsy0w43LHbivRrKpTWNDWx4YAw9tvatURL70Nf7Yd6fkaW/76o0x607WS+CGrfp5f6SJNaiOhnSroyve6qjpAsidokrO0thiXdfcaUHHA6SUjYUTw3xnUuXjMnIbnMIF9R1LQZV1KSjUaPDhRmOcQLAOaT9oaAVNGMZ0k6RLa0U2VVL8u2aLNOpbPKKSjBcfcO5DLYPtlrUQlI6TvwMmMmjm5r56an780k+pjR5vNAs1zEyEHtZmqFPbqODvDSFcmBjctTvex1tSnRIwDE0nMNqqTJqiurs+2XOZgzuPEPqcBv0LSel7Szdemu+Ju+Lsc5Nx3LUjIoWVNU+WByllHSedS8AqVk7hgDDIQivnvdEcXvNyV6HgwYctDbBgt4LWiwA0BIQgMlSUJBUpaghCUjKlKPAADeSegb4/C+qQjctj6n2sLfjDU7J2IujSTydpD9cfEmSM/giC6OkZQMxnznodOnNEvyyLis5xz8CJqYB+UWcRmMp81EHCbDNti00fKGlS7/FxJhgO0HqvZRchG1NIWq5p40aS7tQuGwJuap7IJcnaSr0802kAkqWGxtoSAN6lJAHTGqkqStIWhQUDwIORGPEhRIJ4MRpB41sZabgTjPGS7w9usEHqVYQhHzWQtu6tOsHV9AF7pn3C7NWrVnENV2RBJwjgJpofhWxvx9+kFPHZI6uUypU+tU2UrFJnGpuRnmETMtMMqCkOtLSFIWkjiCCCD344jc8Tx9Dw00u1OlT+g+vTRW9RmlVGhKWclUmpeHmM/1bikqSPcu4G5EdJQZ8w3+SxDmOHEdXL17VWuX2T7Y8DzpAHtt+3xtwvtHVsU0YQhHXqnlxAmO7ueGfnjxHuY7u54Z+ePEVaV6qGCRvLUh+6ftL8XqX8G5GjY3lqQ/dP2l+L1L+DcjKkfvUL5m9YWqr34VM/wCN/wCkrqhCEIsheakhCEEVkvGx7Q0g0N+2r2t2RrNNmAQuXm2gsA+6SeKFDmUkgjmIjmNrU6uEzq/3bLLpD0xO2lXS4qlzD3bOSzqd6pV1X3xCTtIUcFSQeJSSeqkaU1yrPk7x1dbsbfaQqZo7CazJKIyUPy6grCe+pG23+eY1NXkWTUBz7e00XB2aF1uSFdj0ufhweEfFPIBGjPmBGog7xmXKiEUBBGRzxWOCV/L0zKzk8+zIU5hT05Nuol5ZpAypx5aglCQOkqIHjjsvotsaT0aaObcsKR2S3RKczKKWkYDjgT9cX1qWVK8cc1tS6wRfusJQVTLIckbZbcr0yDw2msJYH6ZaFfmGOqUdbk5L2Y+OdOYfX+cSqLwk1DhxoUg05mjhHacw3AHetOaydw+lqFTbXZcIXUpgzD4B/oWcEA9bhR8kxH/dvjNNMdw9kWkOpuNq25emkU5nfu+t5Lh/SFQ/NEYYeA/ZHSqsVTq5oHvk9MOB/bDfgnHegibubie9D9hiu/oGeEDxxjeOmCKQ+rjcHp21Zy23V/XaPMlTYJ/oHcrT8S+UHUBG24ixoSuEUDSJJtuL2ZeroVIO5O7bPbNHr2hs/nxKeJCJCEIIkQ60gfZ9cf5Te+cRMWIdX/8AZ9cmeH1Te+eCKxc5yYHjz8OaHA4O/MN4Vu4xCK92ESb9trnzVZf96JjxDiwgRfttflWX/eiY8SiQhCCJCEIIvLvcl+CYgzLb2EDm2QYnM73JfgmINS29hvpCRBF9OYb/ABwBAPCB6uO+Gen44hFsbV/3aTGvyZNfvNRJ2Iw6v2/SY30/Uya/eaiT0SiQhCCJCEIIkIQgiQhCCLF9KN8SmjXR1cd+zoSpuh01+cShStkOOJSeTRnpUvZSO+Y40TE5PVGafqVVmVzM9OOrmZp5Zyp15xRUtZ75USfHHSH0Q25nKLoHaobK8KuKtykksBWDyTe0+rdzjLKQfCEc244zKKMXzDYWho6T3WV0eDmSEGnxJojO91uRveSkIQjn1Ya+spJztRnJam0ySfnJ2deRLSsswjacfeWoJQ2gDipSiAOuOm2rJqjWtoYpspc91SkrWb5ebC3ZxaNtqnFQGWZYHcMcC77ZW/gk7Ijv6Hfowlrl0hVnSZVZXlJe02UytP2gdn09MJO2scxKGRjHNywPQR0PjrKDT2FnlUQXOji41UuX2UUURvNUs6zQPbI0k5w3YBjrJscEhCEdOquSIga3Op3SLlpVR0paJ6MiSuOVSubqVKlGsN1ZAGVqbQNyZgAEjZH1w5BBUQqJfwjGmpWHOQzDiDu4wtlSqtM0aZEzLOsRiNBGo8XViM64dtrQ6hLjaspUMg9Ij1G99dDRNL6LNNc4/SJYM0W62jWZNtAwhl4qxMtDoHKYWBwAdwOEaIiu48F0vFdCfiCvR0hOw6jLQ5qD9l4B7toOY8aRlOivSBNaKtJFu6Q5Ur2aJPIdmUIOC5KK7SYR42lL8eOiMWiikpUkpUMg7iO9HzY4scHNxC+8WEyPDdCiC7XAgjiOYrt/KzMvOyzU5KPJdYfQl1pxBylaFDIIPQQYRpjU2vN69tXa1Jqbe5WbpLK6NMKweMssto3nieTDZJ6SYRZkCKI8JsUaQCvMc/KOkZqJKvxY4jcbLlXMd3c8M/PHiPcx3dzwz88eIrIr0+MFSN56kP3T9pfi9S/g3I0bG8tSL7p+0vxepfwbkZUj96hfM3rC1Ve/Cpn/ABv/AEldUIQhFkLzUkIQgiRrLWbqEpS9X6/p2cdCEIocylOTjbcUnZbR1qWUp/OjZsQb9EG0706clZfQVa8+iYdEw3O3G40oFLQb7ZmVJ92V7Lih96EIB9tiMGpTDZaWe52kWG0re5NU+LUqnBhQxmDg4nUAbk/QcZCg+kFKUp6ABHqEemZWcnn2afTWS9OTbqJaXbTxW64oIQnxqUBFdL0dtXQb0OXR8aNo5rmkicYKZi6Kh6WlVEf4nK5QCOt5T/yREo7wr7VrWvVLhewRIyy3UJP36wO0T41YHjj8GjKypPRxo9t2xZAJ5KiU5iTKkjHKLSkba+tS9pR75MYDrJXD6WolNtdlfb1F8zLwH4JnBAPWtSPknoiyJGB5LLshaQM+3T0rzTXKgapUY03occ2wZh0ALQALxHKPrK3VkrcWTnaWTknxkk+OA6enngOffx5hFSeO4xlLVJnfvPGMhp9nTM/YVZvhJcDdLnGZZCEjctB2eVWfB20dWFZjHHHA0hTh3hIJOIlZZdjsymiqWtCoMhK56QX6bBG8OvAqXzcQVYHRsiCKKmcnvjvw3c2fHHpyWmJN52Rm0bMxKuLYeHQtCilX7QY85BOMZ78EVQ9MSy0TUm4UPy60vMqB9q4ghST8YETQtuty9yW/Tq9K9zn5Zt8D3O0kEp6wcjxRC878Dh0c8SF1b7gM5bM9bTy/rtJmStof1D2VD4lhwfFAItuwhCJRIh1pAP8Af7cgH+k3j+0RMWIdaQPs+uQ/7Te+eCKw5PMYbs8CMRXO/fmKZzEIr7YR/v8ALaGP8qy+/wDOiY0Q5sL7PLZ/Ksv+9ExolEhCEESEIQReXe5L8ExBqWP8nb37tkROV3uS/BMQalcBhvwRBF9DkDju78VBO+KEZGeiK4JPHEQi2Lq//bLa/Jk1+81EnYjDq/fbMaHP9TJrPymok9AIkIQiUSEIQRIQhBEhCEEUG/RLqsFrsGgpxltU7Or37yClCE7usGIQxL30SmdLmkayqdsYDFFmntrPtuUfSMeLk/29cRCiv6w7hTsTk6gvQmRsPxdDlxrBO9xSEIRrF066X+h+W83R9XiUq4SOUuCrT0+pWMEpS6WEg9OAzEk41Nqm036l6t+j6X2dnlaK1NYxjuxLuf7cbZiyJBni5WG3+0dS811+MZiqTEQ6Xu3AkDoSEIRlrUJCEIItH61Grg9rD0ChSdLr8tRqnQp5b7czMS6nkKYcbKXG8JUMEkNqzv8AaY58xHL2NO9fhYovkt3z4n7CNdMUqVmohixG5zxldHT8q6rS5cSstEAYL2BaDib6RrUAvY071+Fii+S3fPh7GnevwsUXyW758T9hHw8xSXuneVm+ndc+KOa3sUd9Aurjf+hS0J21BfFFqSJmpuVBCzIvJ5MLaaQUABwc7ZV+dCJEQjNhyUKE0MZew41o5msTU3FdHjEFzs59kdi4gTHd3PDPzx4j3Md3c8M/PHiK4K9LDBI2DoA0mU3Q7pboukasUybqEpS25ptyXlCkOq5VlTYKdohO4qzvIjXsVj9Q4joTw9uINxyL5TEBk1BfAii7XAg7CLFdAvZKtGvwcXb8cr9JFfZKdGvwcXZ8cr9JHPyEbTz5O+90Bcp6B0T4Z5x7V0D9kp0a/Bxdvxyv0sfKZ9Er0foYWqT0Y3S88B2iHHpZtJPfVtnHxGIAwh58nfe6AgyEog/8Z5zu1Sc0n6/2lu9ZSYpNlU6TsyRmEFtT7DhmZ/ZPHZdUAls450p2hxBB3xGRSluLW64tbjji1OOLWoqUtZOSpRO8kk5JO8xSEa+PMxpp3CjOJK6KQpcnS4fi5OGGA42xO0nOeUpG89SrR8L/ANYGiPTLO3IWs2uvzORu22yES6evlVpX1NmNGR0K9DlsAUfRrWtI00xiYuioGXlVEf4nKlSAR3i6Xs+COgRl0mX8pm2NOAznk77LVZW1DzbSIsQGznDgja7N0C55FLiIn6YbhFx6RKm80vbYp+zTWOjDedsj/mKWPEIkveVwN2tatUuBzB9JSy3EJJ9s5jCE+NRSPHENUlxW95wrcWStxZO9SycqPjJJiwV54TdjcePGB/Yf2Q7x3RXdjJMQivliW+LpvOj0JTe2y/MhyYGMjkWxtrB7xCQn86JjcI0Fq10ATFUq91OpymVaTT2DzbS8Lc+IBr4zG/YBFFXTZQRQtI1QUhvZZqqEVFvA++UNlwfLQT+dGD78g88b/wBZOgGZoVMudpPbU2ZMu8R+CewAT1LSj5UR/wCBO6CIM8ARu4RnOha4ex7SJIJdUES1VQunvZJxtK7Zs/LSE/nmMGJOP/uCXH2FIflV7D7KkuMrB9q4kgpPiIEEU44Ra7XrjNzW5TbgYGyiflW39n3JUkEp6wcjxRdIlEiHWkD7Pbk34/um984iYsQ6v/7Pbk3/AOU3vnEEVh5t/HvxU8OrjDce8YAZGN0Qivlh77+tk/7Vl/3omNEObD337bR/2rL/AL0TGgESEIRKJCEIIvLvcl+CYg1K9wb3fexOV3uS/BMQZlv5u2B7nogi+p5smG8jHPDgMDhFd2SN8Qiy7RTdNJs28267W1vJlUyb7BU02Vq21qQRuG/HamJCWlpVtK9qouj0ByccmG2TML5SWU2lKAQMknvkbuuIm7okBq22/wClbfqVzvIw5U5nkGT/AFLOU/tcLnxCCLcUW+4q/S7VoFRuauTIl6fSpV2cmnT9402kqUe/uHCLhEZvRANIQtPQibSlX9ievKdRTgEqwoSrf12YV3wQlLZ/3sfCbjiWgOinQOnR0rYUmRdU56FKN/5uAPENJ5Bcr4t+iJaA3G0Oek7rTtpCsKpicjI4Ht49eyH6A/8ANrp8mDz45tRSOP8AP85rG5XJ6vqNqfzu5dJvZD9Af+bXT5MHnw9kO0B/5tdPkwefHNqA4xHn+c1jco9X1G/v53cuzWjHSNb+lmx6ZpAtZE2mmVUOlgTTXJujk3Vtq2k5OO2QefhiMojRepB9y9ZPgT38c/G9I7KViOjQGRHYkA7wqbqssyTn40vD+yx7gNgJAXOf0R4pOmm3kgjIthvI6P5U/j/zEVYlL6Iz9vSi/wDCst/FzURajgqp98ibVfmSotRpb5fqUjytWyhSs4wCY9R83+4OeAfmjAXQBdiNX9kS+grR4wEFARa9LGyeI/krcZ9GF6E/tN2Jn3tUz+GbjNIs2X/os2DqXl+fN5uKf7ndZSEIR9liJCEIIkIQgiQhCCJCEIIuIEx3dzwz88eI9zHd3PDPzx84q0r1UMFWEIRClIQhvgiQhDBgiQhCCL6S0nO1Kbl6ZTGFPTs683LSzSRkrecUEoSOtRAjs1o2sqR0c2Bb1iU7BYodOYkgoDHKKQgBaz31K2lHvkxzX1KNHvZ9rAUeZmWA5T7VZcrk0FDILifrcunr5VYV3+TMdTI63JyX4LHxzpzDkx/nEqh8JFQ4ceFINOZo4R2nMNwF+Vaa1lLgMvRqXazLmF1CYM0+B+CaxgHrcUg/mmNA5wTvzGY6Xrh7ItIdVfQsLl5BQpzHU37f/qFfxCMOwcZjpVWSZ58b4opSUILizhKRkn54qOPCLradBN0XTSbeCconppCXcfgU9u5/YSoeMQRSb0PW8q29HtJlXkFMzNNmemARghx07eD1ApT4ozOCUpSkJSAABgAcwhEorJe1AF02lVqBgbc7KrQ0T967jKD4lBJ8UQ2bUpSAXElCuC0kb0nnB6jE5IiNpSoPY5pBrMglvZYfeE8xu3bD3bH4l7Y8UQUWKkkjGeeK7icY/wDUOoDfugD19+CKQWrdcIm7dqFsOry5SpjlmQfwL2VfsWHPjEbgiKehm4RbukSnFxzYYqgVTnsndle9s/LSkfnGJWRKJEOtIGOz25AT/lN6JixDq/x/f9cm8/4Se+cQRWHGDknfiBB2R0mGejh0GK534zkRCK92F9nttflWX/eiY8Q5sL7PbaB4/VWX/eiY0AiQhCJRIQhBF5d7kvwTEGpY/wAnb3gHZETld7kvwTEGpbuDfN2oiEX13hW7MUByCeiKk4OYoBxgibDzqksyrfKPOrS22kffOKOEjxkgRM61KEzbFtU2gMe1kZZDJPulAdsrxqyfHEZ9DFvC4dIlOS63tMUxKqk9kbsowGx8tST+aYlbEokczdfjSB2YaczbUq/tyNmyKJFIByn009h18jvgcig99BEdH7ouKm2hbVVuqsO8nI0eSenplXQ20grV48Axxer9fqN2XBVLsq5Jnq3PP1GZyeDjyysp6hnA7wEc5lFMcGE2ANJudg7+pWR4OKf42biTrhmYLDa7sAI5V+GEIRx6uNIDjCA4wRdTtSD7l6yfAnv45+N6RovUg+5esnwJ7+OfjekWRIfdYXyjqXmqv/i01/kf+ornF6Iz9vSi/wDCst/FzURaiUvojP29KL/wrLfxc1EWo4aqffIm1Xrkt+DS/wAqR83+4OeAfmj6R83+4OeAfmjAXQDFdktCf2m7E/4apn8M3GaRhehP7Tdif8NUz+GbjNIs2X/os2DqXl6e+9Rfmd1lIQhH2WKkIQgiQhCCJCEIIkIQgi4gTHd3PDPzx4j3Md3c8M/PHiKtK9VDBI2tqr2Va2kXTzblm3rSEVSjTzM8uYlFrUhLhbllrRkoIVuUAdxjVMby1Ifun7S/F6l/BuRkSTQ6ZhtcLguHWtbWoj4VNmHwzYhjyCMxBDTnCnJ6y3Vh+CaQ/XJr6WHrLdWH4JpD9cmvpY3ZCLA8hlfht3BefPPtU/MxOe7tWk/WW6sPwTSH65NfSw9ZZqw/BNIfrk19LG7IQ8hlfht3BPPtU/MxOe7tUW789D00NXBLOOWVO1a053ZPJFqYVNywVzbTTpJI8FaTEGNL2hq+tCF09i18SLaVPpU5IT0uSqVn2kkZU0ogEEZG0g9snI4ggnsXGs9YrQ7IabtFdXs9xloVVLKpuiTS8Ay0+hJ5JWeZJPaK6UKVGsqFFgxoZdAbwXDVgeKy6jJ3Ladk5hsKfeXwibEnOW8d8TbSDfNhnWmPQ6dH/wBQ9F9X0hTbOzM3XUC3LqP+ZSuW0Y63S+erZ6IkzelwItW1KrcK8EyUstxtJ++cxhCfGogeOPzaN7MktHdg2/Y1PCeRolPYk9pIxtqQgBS+tSsqPXGu9ZS4SxSaVarC+3n3zNvgH+iaxsg9a1JP5kbOSgeSy7IWodOnpXL1ufNUqEab0OJtsGYdAC0EnlMbTyytxXbOLPFSjvJPfJJMV6h3xiH/AOmG47hwxGStUmB0GNu6t1BM5cVTuR1s8nTpdMoySNxddO0vHUlKflxqMjdjfiJF6GKvZlrWFJsT91UaXnp5a52abcnmkrQtZ7VKgVZBSgITg9EEW14RYez6xffpQvKLPnQ7P7F9+lC8os+dEor9GjNZegBP1FuxtHtVKpz5HQrK2yeopWOtQjavZ/Yvv0oXlFnzoxbShW7IuqxatSZe76G5M8jy8sBPtEl5s7aAN5O8pxu37zBFGPd0Q6SeqKJVtAK2SMjODxHXHreCDjniEVNt5rZelnC280oONKHFK0kFJ+MCJnWnXmbntqm3AxgJnpZDxA+9UR2yfErI8UQx3dfNEgdWy4DM0CpWw+v65TZn0wyn+peyTjqcDnyhEotxRDrSB9ntyflN75xExYh1pA3X9ceP9JvfPBFYt3ACKA9HRiK53HoPCKAZ3jniEV8sL7PLaHH+6sv+9Ex4hzYWOz22vyrL/vRMaJRIQhBEhCEEXl3uS/BMQal+4N7h7UcYnK73JfgmINSvcG88yYIvoN+BgQBH7N8OPDriobedWmXlEFx95QaZQN+0tRASnrJIHjiEUgtW63xKW7ULndQQuqzHIsk/gWcpyOtZc+IRuCLXatCYti26bb8uQUSEs2wVAY21AdsrrJyfHF0iUVivqybf0jWpULKuqXefpNUbDU200+tlTiAoK2dpBCgCQM4O8ZEaf9Ytq0+8ia8rzX0kb9hHwiysCOeFFYCeMLPlapPSLDDlozmAm9muIF9eZaC9Ytq0+8ia8rzf0kPWLatPvImvK839JG/YR8vN0p8Ju4LJ9Iat+Zic93atBesW1afeRNeV5v6SHrFtWn3kTXleb+kjfsIebpT4TdwT0hq35mJz3dqx+wbDtjRlaUhY9nSK5Oj0wOCWZW8t0p23FOK7ZZKjlS1HeeeMghCMprQxoa0WAWqiRHxnmJEN3E3JOJJxJXOf0R1CRprt9YT2yrXbCj0gTT+PnPxxFWJd+iTyK2tJdmVIhOzM0OYYGBvy1MAnJ5x9dGPH0xESK+qotOxNq9DZJuDqJLke71EhI8uJ2kKTjOQRjpj1Abo166JdhtAb5mdB2j6YLgXylsUw7Q5/5K3GeRqvVWqP1U1c9HkxnPJ0GWlv0KeS/wDwjakWZKnhQGEah1LzFU2GHPRmHQ9w6SkIQj7rBSEIQRIQhBEhCEESEIQRcQJju7nhn548R7mO7ueGfnjxFWleqhgqRvPUi+6ftL8XqX8G5GjY3lqQ/dP2l+L1L+DcjKkfvUL5m9YWqr34VM/43/pK6oQhCLIXmpIQhBEhCEESIl6Xbg7JNIVVmW17TEioU5g82GiQsj/mFfxCJM3tcTdp2nVbhWRmTllrbB4KdO5CfGopHjiGyAsJ+uLK1EZUs8VKO8k9ZyYIq5zv3YhnPDdAHAxFc54RCJuxnv8AxR4LTRJUppBPEkpG+PXNz5ioxjv/ADQReOQZzjkkZH+qIpyLR38ij5Ij6Zzu37ocN0EXzLDI4NN9/tRFQyyBkNITg7u1G6Pe4bsCHfB8UEVM7hv5oEb8EiHE9cDx5t4gibx3sRmmhy4Ox7SJTHHHNmXqWac9n+swW/8AqJSPzjGF8BvzmC1OhIWwsoeSQptQPtVg5SR1EAwRTjiHV/8A2fXIOmpvD9oiVtn3A1dVr0u4WcAT0sh1SR96vHbp8SgR4oilf+ez64wD/lN75xEorDnhvHegeG/HxwHegCQe/EIr7YeOz22scfqrL/vRMaIc2Gc37bR6arL/AL0TGgESEIRKJCEIIvLvcl+CYg1Lj+TNjO7Aicrvcl+CYg1Lfzdsbh2ozBF9Nxz0xnGha3TcOkOnqcSFS9KSqoPZG4lPatj5agfzDGEDdzxIPVut/wBJ23ULkebw5VZrkmj/AFDOUj41lz4hEItvwhCJRIQhBEhCEESEIQRIQhBFBb0S+lKROWDXsgpdE9I45wQEOft/8CITR0a9EWttdU0KU24WGkFyg16XccWR2wYeStlQHeK1tE+DHOWODrjOBOuOux6FfmQscRqJDb7pcOm/UQkIQjULr1051B68isat9Ip4US5Q6hP05zJ3j6+p1Pi2XUxImICehxaSZel3PcmimozCUCttprFNCiAFPtJCH2xzlRb5NQHQ2s9MT7iwaRGEaTYRoFt3cvPOV8m6SrMcEZnHhDY7P13HIkIQjZLmkhCEEWq9YjT5SdXy0ZC5qjQ36w7Uqiiny8mw8lpRJQtallSgdyUoPNxIHPEf/ZL6B8ElV8ptebGqtfrSmxfOl2XsqlTKHqbZDC5Z1SCClVQe2VPgEe4QltB5woLB4RGaOOqFZmGTLmQHWaM2A5dGtXHk7kXT49NhRp+GTEcL4uGY4YEaLHlU7vZL6B8EdV8ptebD2S+gfBJVfKbXmxBGG4bzGH57nvf6B2Ld+g9D+D/s7tXUPRJrWO6XLem7jpWjealGJWfXIbL1UZBWpLbayoZA3fXMdYMI+mpHZYtfV0tx2dlAmZrqn604FpSTsvrJbIPQWg2d+/fiEdZKtmIsBj3vzkA4DsVQ1Z1Plp6LAgQRwGuIHtO0G2tcu5ju7nhn548R7mO7ueGfnjxFfFeihgkby1Ivun7S/F6l/BuRo2Mk0c6Qrk0VXlIX7aKpRNWpyXUMGaa5VrZdbKF5SCM9qo43x9paIIMdkR2AIO4rCqcu+ckY0vD+09jmi+sggLs9COZvsgesT7u1fJa/pIeyB6xHurV8lr+kjr/SGU1O3d6pz1eVfWznHsXTKEczfZA9Yj3dq+S1/SR85jX91i32VNInLal1HH1xqlEqHVtLI/ZD0hlNTtw7VI8HlX1s5x7F024cYRz81YdIOmrWO05086QL6qE9b9qMKrc1Iy7aJWUW8DsSyVoaCQs8orlAF7XcTgbsx0DjYyU4J6GYrGkC9hfSudrdGfQ44lYrw59rm17C+AubZ7Z8NIWl9ZS4OSpdKtVl3C514zj4B/omvag9a1A/mRoQ5zx4Rl2lu4DcmkKrTjbm3Lyak0+XI4bLWQo/pC5GI7yP2RlrTIRz53c8OO/OSe9FT1x7l5WYn5linSQBmJt5uXZHHt1qCU/tMEXz6z+yGejcCYlKzoK0YNsttu23yq0pAUtU2/lZxvJwvG+PfqG6LPesn9bf8+CKLA48ckQI5+MSn9QzRZ71k/rb/nw9Q3RZ71k/rb/nwsiivxAwMwwrjxiVHqG6LPesn9bf8+HqGaLPesn9bf8APgiivu5juhvO/piUrugvRgtpaGrb5JakkJcTNPEoONxGV43RF+blJmnT0zS5wYmJJ9yWd8NCiknx4z44Ivlnnhkjf44cDvJwIE55+/vgi39q2XD6YotUtZ5fb058TTAP4F7JIHUtKz+cI0/pAGb9uQ/7Se+cRdNEFwdjmkSlvrXsy9RUac/1O42D+kSj4zFr0gfZ9cg35FTeH7YIrFnfuGIoNwBzxhgc5yeiB4AiCK+2EB2eW1gb/qrL/vRMaIc2H9n1tdBqsuf7UTGgESEIRKJCEIIvLvcl+CYg1K/zdvPuR44nK73JfgmINSu6Xb45KYgovqGn5haJeUQpcw8tLTKQN6nFEJSPjIiZ9s0OXtq3qdQJbuchLNsA+6IG9XjOT44jToTt7sg0hyKnG9qXpKFVB3du2k9q2OvbUFDwDEqYlEhFovC56dZVp1i76uvZkqLIvz75HEoaQVkDvnGAOkxzjR6ILrEuDlCLVb2yVBH1MWdgHeE55TfjhnvRr52pQJEhsW9zqXQUXJqerzXvlbWbYG5tjqzHl5F0zhHM32QPWI93avktf0kPZA9Yj3Vq+S1/SRhekMpqdu71uvV5V9bOcexdMoRzN9kD1iPd2r5LX9JD2QPWJ93avktf0kPSGU1O3d6eryr62c49i6ZQjmb7IHrEe7tXyWv6SHsgesR7u1fJa/pIekMpqdu709XlX1s5x7F0yhHM32QPWI91avktf0kSB1NtZXSfpxu646LfiqOZamU5mal/SUmplW2pwpOSVnIwI+0vWpaZiiEwG54u9YdQyKqVMlnzcYt4LcbE3xtq41vzTVYSdKGie6rDwnlqvTXmZYq4JmANplR6nEoPijjiA6nKJhpTTyCUONqGFIWDhSSOYggg9Udw45g67uh1/Rlpfmbnp0mpNv3qpdRllpHaMz3+Msd4kkOjhucUB7U4wMopUua2YbozH6fzjXQeDiqNhRYlOiH7XtN2jEbSLH/qVHuKRWEckrdX77fuCuWnXafdFs1Jyn1alTCJqTmW95bcTwyDuUkjKVJO4pJB3GOqurxrI2dp7txt2TeZp1zSjQ+qlFcdHKsqGAXGs73GSTuWOGQFYO6OTcfppdUqlDqctW6HU5um1GSXyktOSjymXmVdKVpII+Y88bKnVKJT3kjO04j+aVzeUeTcDKGCA48GI37LvodY6sRpB7cwjmrZHogenG2WGpK5pSiXYy2MctNNGUmldGVtdocY/B5OTkxnrnomFWLBDWh2VD2zuKq4rYz4mc4jqGV6ScLkkbQfpdVXGyCrUJ/BYwOGsOFv9rHoU7YjtrW61dE0M0OatK055ievyeZKGGGylxNLSpO6YmBwBAOUNneo43bOTETtIOvfp4vaWep1Gm6daEm8CkmlNlc1skYI5dzJT4SEpUOYxHh1x1992amHnHn31qdeddWVrcWTkqUo5KieknMa6eygDmmHKg3Ok/RdHQfB8+HFEeqEWGfgDPf5jhbiF760ccefdcmJqYdmH3lqddeeWVuOuKJKlqUd5USSSeckxSEI5ZWqkXyxLLqGke9qFYNLCvTFfn2pLaSMltpRy651IbC1nwYscTY9Ds0NOuzlT051uVwwlDlIoAWn252v5TMJyOlIaSoHmeEZcjKmcjthDDTs0rUV2qNo8hEmyc4Fm8bjh2niBU4KVS5GiUuTo1Ml0sScgw3LS7SeCG0JCUpHUABCP1QixwABYLzYSXG5xXECY7u54Z+ePEe5ju7nhn548RVy9UjBIpFYRClIQhBFSKwj7yFLqNcqEpQ6Owp6oVKYbk5RtPFbzighA+UoRNr4KCQBc4LoZ6HXYH1A0UVO/wCaZAmruqKuRX0yctlpvm53C+rcSMEd+JJ3xcKbUtGq3ASNuTllKaBPtnT2rafGopHjiliWjTrBsuh2TSR/JKHIMSDRxgqDaAnaPfJBJ75May1lLh5Kn0i1GV9tOPKnZgA/0bW5APWtQP5kWRJQPJZdkLUOnT0rzTWp81SoRZvQ4m2wZh0ALQqAoJHKKKlHetZ3lSjxJ6zvio47orkcQYA8+D/9xkrVqgJjYGgqgKrWkSWmlo2mKOyudcJG7lCNhsdeVKV+ZGv93GJD6uFA9JWtO3E6jDlXmiltXSyzlKf7ZcPjzBFtyEIRKJCEIIkIQgiRF3TtQfqLpDmZtCMMVhludRu3coBybg/spJ8OJRRqPWQoPpy1pG4mm8uUmbCXD/Uu4Qf7fJn44Io84ORgbopg8N5gdx3DhFeI3xCIkrSpLrbikLQpK0qHFKgcgjqIBj9VWqUzWatOVmcCBMTrped2RhJWeJHXjPjj8nPvhkc8EVRnGzzYinDGBvMFAjfkw3YEEV9sMAX7bRH+lZf96JjRDmw/s9trB3fVWX/eiY0AiQhCJRIQhBF5d7kvwTEGpb+bt+CInK73JfgmINybT8yiXlJRBW/MFDLSBv2nFKCUjHWREIpE6t9viTtiduV1GHKtMlDRP4BnKR8a+UPViNuxbbZojFt29TqBLb25CWbYB90UpAKj3yck9cXKJRRd9EJ0gC2dDLFlSz2zOXjPolVJBwfSjOHXj1EhpB7zhjm/Eh9e7SCq9NPc1QpZ/bkLPkm6W2AcpMyvDswrryppB/3cR4jgKxMeUTbiMBmHJ33XoPI6n+bqRCaR7T/bP/bD/WyQhCNWuoSKRWEESEIQRIl96Gv9sO9PyNLf99URBiX3oa/2xL0/I0t/31RsaT99h7foVzeV/wCCTGwfqC6CRg2mrRHbum3R9ULDuElkTGH5KcQgKckppGS28jPQSQRu2kqUnIzGcwjv4kNsVpY8XBXn6BHiSsVsaCbOabg6iFxcv6wbr0YXbP2Pe1O9J1Wnq7bZyWphok7D7Svvm1gZB4jeCAoECwR1r1g9Xaz9YC2k0+rqNOrkglSqVWWWwp2VWR7RQ3co0o42myRnGQUkAjmDpP0UX5ocuVdrX/RFyT5KvSk23lcpPoH9Iw7gbQ4ZScLTkbQEcHUqZEkXXGdhwP0P8zq+8msqJevQgxxDYwxbr426xxYjToJxGKwhGrXVJFIrCCJCEIIkIb+aNj6EdAWkDTzX00205JUtSGHQipV19smVkxxUBw5V3HBtJ4kbRSN8fSHDfGcGQxclfCZmYMnCdHjuDWjEn+dGJ0L5aCdClx6eL9l7QoqXJensFD9aqQHayMpnfg8C6vBS2nnOVHtUqI622xbVFs23abaluSKJOl0mVbk5RhHBDSEgJGeJO7eTvJyTvMY5og0QWboTs5izbMk1JaSrlpqbewqYnXyAFPOqAGVHAAAwAAAAAMRm0d1SqaJCHd2d5x7FQ+VeUjq/MBsPNBZ9ka/7jxnQNA5UhCEbVcmuLD9m3kX3CLNuE9urhSZnp8CPn2GXn7zLh8kzPmR2rhHMejTfidHerQHhMiD/ANYc79q4qdht5+8y4fJMz5kOw28/eZcPkmZ8yO1cIejTfidHep9ZkT8sOd+1cVOw28/eZcPkmZ8yHYZefvMuHyTM+ZHauEPRpvxOjvT1mRPyw537VxU7Dbz95lw+SZnzI3pqWaIq7cenul1av23UpSm2tLuVha52QdaQuYGG2EgrQAVbSysDj9byOEdN4R9YGTzIMVsQvvY3tbvWJP8AhDjTkrEl2QA0vBF+Fe18x0DQkRY0rG4rov6qT7NAq7ktLLEjKqTIPKSW28gqBCcEFZWc9GIlPCOiVcqFvY9cW/Nt1jvf3Oe82Kdj1x7/AO9useT3/MiacIiyKFarbudfaMW3Vy6vtUA094ZUdw3lOBvxEwLWobNtW3TKAxgpkJVtgkDG0pKQFK8ZyfHF0hEokIQgiQhCCJCEIIkWq7KE1c9s1O33sYn5VxkEjOyojtVeJWD4ousIIoVot25tgB22qwlwDCh9T3jhXA79npivY5ceMdjdY8nv+ZE04RCKFot64xxtqseTnvNinY7cR423WPJz/mRNOELIoWG3rjO/sbrHk5/zYdjlxcexysj/AOOf82JpwhZFEaxqBX2b5t156gVVttupsKWtci8lKUhW8klOAO/EuYQiUSEIQRIQhBF5d7mvwTEX9CtkVafvqmTFWo09LStLbVPLVMyjjaVOJGy2kFQAJ2lbWP8AUiUUIIkWy6a/LWrbVVuecZeeYpMk9OuNstlbi0toKilKRvUo4wAOJMXOEQbkZl+mFocC4XC4v1ai6RLjq8/cdYtC4V1CrTb0/NK+pMzvedWVr+86VER+TsNvP3mXD5JmfMjtXCOZOTbSbmId3erOHhLe0WbLAD5v2rip2G3n7zLh8kzPmQ7Dbz95lw+SZnzI7Vwh6NN+J0d6n1mRPyw537VxU7Dbz95lw+SZnzIdht5+8y4fJMz5kdq4Q9Gm/E6O9PWZE/LDnftXFTsMvL3mXD5JmfMh2G3n7zLh8kzPmR2rhD0ab8To709ZkT8sOd+1cVOw28/eZcPkmZ8yJa+hz0Ku0nSBeLtWoNTkULo8slK5qSdZSo8srcCtIBPeie0IyJWhNlYzYwfe3F3rXVbLx9VkokmYAbwxa/CvbODhYakhCEb9V+kWK9bFtDSLb8xa972/J1imTPt5eZb2gFcy0nihQ5lJII5jF9hEOaHjguFwv3DiPhOD4ZIIwIzEKCWlb0OWoMPO1PQvdTbzCt4pFbWQpHebmUg5HeWnO72xiMV5aC9Muj51aLu0Z16TbQdn0wzLGal1HvOs7aT8cdioHhGjmMn5aKeFDJad43d67mneEGpSgDJkCKNZzO3jNvBK4dF5tLimVq2XEHCkKGFJPQQd4iu2nGdoYMdAtaD/AABKdb//AHIiRL/ZRO/i4+YRykzK+TRDDvdWjTK35yl/H+L4OOa98OQLWsuTNvplJNtyYfX7VplCnFq6kpBJjZljatWnbSIttVt6Naq3Ku4Inakj0jLbJONradwpQHOEpUe9E6NWz7GqX+Pp/ciR8bqRoTJhgiRHmx0AfXP1Lj6zl9HkoroEvBFxpJJ6AB1qF2iP0Omi09xqr6abiFZcThQo1MK2ZUHode3OODmwnYG7nG6JhUGgUO16RLUC26RKUymySOTl5SUZS000noSlIAHT1x++EdHKyUCTFoLbceneq3qlbnqy/hTkQkDAYAbAM3LjxpCEIy1qkhCEEX//2Q=="/>
+                </p>
+                <table class="table table-borderless" style="width:100%">
+                  <tr>
+                    <td>
+                      <div style="text-align: center;">
+                                            PLT<span style="margin-right: 10px;"/>(NO.
+                                            <span style="color: red;" t-field="o.lot_producing_id"/>
+                                            )
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div>
+                                            P.D<span style="margin-right: 40px;"/>:
+                                            <span style="margin-right: 20px;"/>
+                                            <span t-if="o.date_finished"><span t-esc="o.date_finished.strftime('%d/%m/%Y')"/></span>
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div>
+                                            P.S<span style="margin-right: 41px;"/>:
+                                            <span style="margin-right: 20px;"/>
+                                            <span t-if="o.date_finished"><span t-if="o.date_finished and o.date_finished.hour &gt; 20 or o.date_finished.hour &lt; 8">
+                                                    Night
+                                                </span><span t-else="">
+                                                    Day
+                                                </span></span>
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div>
+                                            P.T<span style="margin-right: 41px;"/>:
+                                            <span style="margin-right: 20px;"/>
+                                            <span t-if="o.date_finished"><span t-esc="o.date_finished.strftime('%H:%M:%S')"/></span>
+
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div>
+                                            P.TYP<span style="margin-right: 25px;"/>:
+                                            <span style="margin-right: 20px;"/>
+                                            <span t-field="o.print_barcode"/>
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div>
+                                            SHT/PLT<span style="margin-right: 11px;"/>:
+                                            <span style="margin-right: 20px;"/>
+                                            <span t-field="o.sheet_pallet"/>
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div>
+                                            Q.INSP<span style="margin-right: 19px;"/>:
+                                            <span style="margin-right: 20px;"/>
+                                            <span t-field="o.inspector"/>
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div>
+                                            P.OPR<span style="margin-right: 24px;"/>:
+                                            <span style="margin-right: 20px;"/>
+                                            <span t-field="o.user_id"/>
+                                        </div>
+                      <span style="font-size: 6pt;">
+                                            ............................................................................................................................................
+                                        </span>
+                      <div style="text-align: left;">
+                        <t t-if="o.note">
+                          <span t-field="o.note"/>
+                        </t>
+                        <t t-else="">
+                          <p style="color: white">NOTE</p>
+                        </t>
+                      </div>
+                      <div style="font-size: 6pt; margin-top: -15px">
+                                            ............................................................................................................................................
+                                        </div>
+                    </td>
+                  </tr>
+                </table>
+                <t t-if="o.print_barcode and not o.lot_producing_id.name">
+                  <t t-set="merge_barcode" t-value="o.print_barcode"/>
+                </t>
+                <t t-if="o.lot_producing_id.name and not o.print_barcode">
+                  <t t-set="merge_barcode" t-value="o.lot_producing_id.name"/>
+                </t>
+                <t t-if="o.print_barcode and o.lot_producing_id.name">
+                  <t t-set="merge_barcode" t-value="o.print_barcode + o.lot_producing_id.name"/>
+                </t>
+                <center>
+                  <t t-if="merge_barcode">
+                    <div style="margin-top: 25px" t-esc="merge_barcode" t-options="{'widget': 'barcode',  'img_style': 'max-height:50pt; max-width:100%;', 'img_align': 'center'}"/>
+                    <div style="font-size: 8pt; color: white; font-wight: bold; background-color: grey; width: 100%;">
+                      <p style="margin-left: 5px">Batec Batiment technique</p>
+                    </div>
+                  </t>
+                  <t t-else="">
+                    <div style="margin-top: 2px">
+                      <br/>
+                      <br/>
+                      <br/>
+                      <br/>
+                      <br/>
+                      <div style="font-size: 8pt; color: white; font-wight: bold; background-color: grey; width: 100%;">
+                        <p style="margin-left: 5px; text-align: left;">Batec Batiment technique</p>
+                      </div>
+                    </div>
+                  </t>
+                </center>
+              </div>
+            </t>
+          </t>
+        </t>
+      </t>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key">mrp_production_report.mrp_production_report_id_copy_1</field>
+    <field name="mode">primary</field>
+    <field name="model" eval="False"/>
+    <field name="name">mrp_production_report.mrp_production_report_id copy(1)</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.odoo_studio_account__3b150727-f681-423c-8d75-96230eee66fe" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='invoice_date']" position="attributes">
+          <attribute name="options"/>
+          <attribute name="widget">date</attribute>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="account.view_move_form"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">account.move</field>
+    <field name="name">Odoo Studio: account.move.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.odoo_studio_default__09b61398-02c4-451e-a02c-99af2c43a169" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//graph[1]/field[@name='name']" position="replace">
+          <field name="route_id" type="col"/>
+          <field name="picking_type_id" type="col"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="studio_customization.default_graph_view_f_e147cb7a-e1f8-465b-b180-681f2e198928"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.rule</field>
+    <field name="name">Odoo Studio: Default graph view for ir.model(484,) customization</field>
+    <field name="priority">99</field>
+    <field name="type">graph</field>
+  </record>
+  <record id="studio_customization.odoo_studio_default__c1dbd609-1626-4a35-94dd-4314d5441b59" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//tree[1]" position="attributes">
+          <attribute name="editable">top</attribute>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="studio_customization.default_list_view_fo_ccdfab77-69f2-4607-a68d-dcdb3dae1046"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">x_classification</field>
+    <field name="name">Odoo Studio: Default list view for x_classification customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_default__df1ef428-b885-4508-bbaa-6cd7fce6057d" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//kanban[1]" position="attributes">
+          <attribute name="default_group_by">name</attribute>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="studio_customization.default_kanban_view__3078bddb-9dde-48f0-a98f-556c2261c401"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.route</field>
+    <field name="name">Odoo Studio: Default kanban view for ir.model(481,) customization</field>
+    <field name="priority">99</field>
+    <field name="type">kanban</field>
+  </record>
+  <record id="studio_customization.odoo_studio_equipmen_62515fa3-d60a-4fe2-89ee-cbc16d6a6120" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="False"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='priority']" position="after">
+          <field name="x_studio_many2many_field_gY36R">
+            <tree string="Employees" multi_edit="1" sample="1" js_class="hr_employee_list">
+              <field name="name" readonly="1"/>
+              <field name="first_contract_date" optional="hide"/>
+              <field name="activity_user_id" optional="hide" string="Activity by" widget="many2one_avatar_user"/>
+              <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+              <field name="work_location_id" optional="hide"/>
+              <field name="expense_manager_id" optional="hide" string="Expense Approver"/>
+              <field name="leave_manager_id" optional="hide" string="Time Off Approver"/>
+              <field name="coach_id" invisible="1"/>
+              <field name="active" invisible="1"/>
+              <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color'}" optional="hide"/>
+              <header>
+                <button name="action_view_planning" string="View Planning" type="object" invisible="not context.get('chat_icon',0)"/>
+              </header>
+            </tree>
+            <form string="Employee" js_class="hr_employee_form" class="o_employee_form">
+              <field name="active" invisible="1"/>
+              <field name="user_partner_id" invisible="1"/>
+              <field name="hr_presence_state" invisible="1"/>
+              <field name="image_128" invisible="1"/>
+              <header>
+                <button name="action_send_appraisal_request" string="Request Appraisal" type="object" data-hotkey="g" groups="!hr_appraisal.group_hr_appraisal_user" class="btn btn-primary" attrs="{'invisible': &quot;[('parent_user_id', '!=', uid)]&quot;}"/>
+                <button name="action_send_appraisal_request" string="Request Appraisal" type="object" data-hotkey="g" groups="hr_appraisal.group_hr_appraisal_user" class="btn btn-primary"/>
+                <button name="563" string="Launch Plan" type="action" groups="hr.group_hr_manager"/>
+                <button name="923" string="Deduct Extra Hours" type="action" groups="hr_holidays.group_hr_holidays_user" context="{'default_employee_id': id, 'deduct_extra_hours': True}" attrs="{'invisible': [('total_overtime', '&lt;=', 1)]}"/>
+              </header>
+              <sheet name="studio_sheet_1015ed">
+                <div name="button_box" class="oe_button_box">
+                  <button name="action_open_documents" class="oe_stat_button" groups="documents.group_documents_user" icon="fa-file-text" type="object">
+                    <field name="document_count" widget="statinfo" string="Documents"/>
+                  </button>
+                  <button id="hr_presence_button" class="oe_stat_button" disabled="1" attrs="&#10;                    {'invisible': ['|', '|', '|',&#10;                        ('is_absent', '=', True),&#10;                        ('hr_presence_state', '=', 'absent'),&#10;                        ('attendance_state', '=', 'checked_in'),&#10;                        ('id', '=', False),&#10;                    ]}&#10;                ">
+                    <div role="img" class="fa fa-fw fa-circle text-success o_button_icon" attrs="{'invisible': [('hr_presence_state', '!=', 'present')]}" aria-label="Available" title="Available" name="studio_div_77d2d8"/>
+                    <div role="img" class="fa fa-fw fa-circle text-warning o_button_icon" attrs="{'invisible': [('hr_presence_state', '!=', 'to_define')]}" aria-label="Away" title="Away" name="studio_div_e2ee54"/>
+                    <div role="img" class="fa fa-fw fa-circle text-danger o_button_icon" attrs="{'invisible': [('hr_presence_state', '!=', 'absent')]}" aria-label="Not available" title="Not available" name="studio_div_448f41"/>
+                    <div class="o_stat_info" attrs="{'invisible': [('hr_presence_state', '=', 'present')]}" name="studio_div_3e2243">
+                      <span class="o_stat_text">
+                                        Not Connected
+                                    </span>
+                    </div>
+                    <div class="o_stat_info" attrs="{'invisible': [('hr_presence_state', '!=', 'present')]}" name="studio_div_b8683b">
+                      <span class="o_stat_value" attrs="{'invisible': [('last_activity_time', '=', False)]}">
+                        <field name="last_activity_time"/>
+                      </span>
+                      <span class="o_stat_value" attrs="{'invisible': [('last_activity_time', '!=', False)]}">
+                        <field name="last_activity"/>
+                      </span>
+                      <span class="o_stat_text">Present Since</span>
+                    </div>
+                  </button>
+                  <button string="Planning" class="oe_stat_button" icon="fa-tasks" name="action_view_planning" type="object"/>
+                  <button name="670" context="{'search_default_employee_id': id, 'default_employee_id': id}" groups="maintenance.group_equipment_manager" class="o_stat_button" icon="fa-cubes" type="action">
+                    <field name="equipment_count" widget="statinfo"/>
+                  </button>
+                  <field name="appraisal_count" invisible="1"/>
+                  <button name="action_open_last_appraisal" class="oe_stat_button" attrs="{'invisible': [('last_appraisal_id', '=', False)]}" icon="fa-star-half-o" type="object">
+                    <div class="o_field_widget o_stat_info" name="studio_div_71930d">
+                      <span class="o_stat_value">
+                        <field name="last_appraisal_date" readonly="1"/>
+                      </span>
+                      <span class="o_stat_text">
+                            Last Appraisal
+                        </span>
+                    </div>
+                  </button>
+                  <field name="show_leaves" invisible="1"/>
+                  <field name="is_absent" invisible="1"/>
+                  <field name="hr_icon_display" invisible="1"/>
+                  <button name="action_time_off_dashboard" type="object" class="oe_stat_button" context="{'search_default_employee_id': active_id}" attrs="{'invisible': [('is_absent', '=', False)]}">
+                    <div attrs="{'invisible': [('hr_icon_display', '!=', 'presence_holiday_present')]}" role="img" class="fa fa-fw fa-plane o_button_icon text-success" aria-label="Off Till" title="Off Till" name="studio_div_97ecaa"/>
+                    <div attrs="{'invisible': [('hr_icon_display', '!=', 'presence_holiday_absent')]}" role="img" class="fa fa-fw fa-plane o_button_icon text-warning" aria-label="Off Till" title="Off Till" name="studio_div_f6ad19"/>
+                    <div class="o_field_widget o_stat_info" name="studio_div_2c2c99">
+                      <span class="o_stat_value">
+                        <field name="leave_date_to"/>
+                      </span>
+                      <span class="o_stat_text">
+                            Off Till
+                        </span>
+                    </div>
+                  </button>
+                  <button name="action_time_off_dashboard" type="object" class="oe_stat_button" icon="fa-calendar" attrs="{'invisible': [('show_leaves','=', False)]}" context="{'search_default_employee_id': active_id}" groups="base.group_user" help="Remaining leaves">
+                    <div class="o_field_widget o_stat_info" name="studio_div_b27fe2">
+                      <span class="o_stat_value"><field name="allocation_used_display"/>/<field name="allocation_display"/> Days
+                        </span>
+                      <span class="o_stat_text">
+                            Time Off
+                        </span>
+                    </div>
+                  </button>
+                  <field name="contract_warning" invisible="1"/>
+                  <button name="action_open_contract_history" class="oe_stat_button" icon="fa-book" type="object" groups="hr_contract.group_hr_contract_manager" attrs="{'invisible' : [('employee_type', 'not in', ['employee', 'student', 'trainee'])]}">
+                    <div attrs="{'invisible' : [('first_contract_date', '=', False)]}" class="o_stat_info" name="studio_div_316791">
+                      <span class="o_stat_text text-success" attrs="{'invisible' : [('contract_warning', '=', True)]}" title="In Contract Since"> In Contract Since</span>
+                      <span class="o_stat_value text-success" attrs="{'invisible' : [('contract_warning', '=', True)]}">
+                        <field name="first_contract_date" readonly="1"/>
+                      </span>
+                      <span class="o_stat_text text-danger" attrs="{'invisible' : [('contract_warning', '=', False)]}" title="In Contract Since">
+                                    In Contract Since
+                                </span>
+                      <span class="o_stat_value text-danger" attrs="{'invisible' : [('contract_warning', '=', False)]}">
+                        <field name="first_contract_date" readonly="1"/>
+                      </span>
+                    </div>
+                    <div attrs="{'invisible' : [('first_contract_date', '!=', False)]}" class="o_stat_info" name="studio_div_3ab8c0">
+                      <span class="o_stat_value text-danger">
+                        <field name="contracts_count"/>
+                      </span>
+                      <span class="o_stat_text text-danger">
+                                    Contracts
+                                </span>
+                    </div>
+                  </button>
+                  <button name="open_employee_sign_requests" type="object" class="oe_stat_button" icon="fa-pencil" attrs="{'invisible': [('sign_request_count', '=', 0)]}">
+                    <div class="o_field_widget o_stat_info" name="studio_div_958707">
+                      <span class="o_stat_value">
+                        <field name="sign_request_count"/>
+                      </span>
+                      <span class="o_stat_text">Signature Requests</span>
+                    </div>
+                  </button>
+                  <button type="object" class="oe_stat_button" id="open_work_entries" icon="fa-calendar" name="action_open_work_entries" string="Work Entries">
+                </button>
+                  <button name="886" class="oe_stat_button" icon="fa-money" type="action" groups="hr_payroll.group_hr_payroll_user">
+                    <field name="payslip_count" widget="statinfo" string="Payslips"/>
+                  </button>
+                  <field name="attendance_state" invisible="1"/>
+                  <button name="912" id="hr_attendance_button" class="oe_stat_button" type="action" attrs="&#10;                    {'invisible': ['|', '|', '&amp;',&#10;                        ('hr_presence_state', '=', 'present'),&#10;                        ('attendance_state', '=', 'checked_out'),&#10;                        ('is_absent', '=', True),&#10;                        ('id', '=', False),&#10;                    ]}&#10;                " context="{'search_default_employee_id': id}">
+                    <div role="img" id="oe_hr_attendance_status" class="fa fa-fw fa-circle o_button_icon oe_hr_attendance_status_green" attrs="{'invisible': [('attendance_state', '=', 'checked_out')]}" aria-label="Available" title="Available" name="studio_div_b76dac"/>
+                    <div role="img" id="oe_hr_attendance_status" class="fa fa-fw fa-circle o_button_icon oe_hr_attendance_status_red" attrs="{'invisible': [('attendance_state', '=', 'checked_in')]}" aria-label="Not available" title="Not available" name="studio_div_0e09eb"/>
+                    <div class="o_stat_info" attrs="{'invisible': ['|', ('last_check_in', '=', False), ('last_check_out', '!=', False)]}" name="studio_div_f6dcd3">
+                      <span class="o_stat_text">Attended Since</span>
+                      <span class="o_stat_value">
+                        <field name="last_check_in" widget="relative_time"/>
+                      </span>
+                    </div>
+                    <div class="o_stat_info" attrs="{'invisible': [('last_check_out', '=', False)]}" name="studio_div_45c98b">
+                      <span class="o_stat_text">Not Attended Since</span>
+                      <span class="o_stat_value">
+                        <field name="last_check_out" widget="relative_time"/>
+                      </span>
+                    </div>
+                    <div class="o_stat_info" attrs="{'invisible': [('last_check_in', '!=', False)]}" name="studio_div_79eacf">
+                      <span class="o_stat_text">Attendance</span>
+                    </div>
+                  </button>
+                  <button name="911" class="oe_stat_button" icon="fa-clock-o" type="action" context="{'search_default_employee_id': id, 'search_default_check_in_filter': '1'}" groups="base.group_user" help="Worked hours last month">
+                    <div class="o_field_widget o_stat_info" name="studio_div_a70df3">
+                      <span class="o_stat_value"><field name="hours_last_month_display" widget="float_time"/> Hours
+                        </span>
+                      <span class="o_stat_text">
+                            Last Month
+                        </span>
+                    </div>
+                  </button>
+                  <button name="917" class="oe_stat_button" icon="fa-history" type="action" attrs="{'invisible': [('total_overtime', '=', 0.0)]}" context="{'search_default_employee_id': active_id}">
+                    <div class="o_stat_info" name="studio_div_9776ec">
+                      <span class="o_stat_value text-success" attrs="{'invisible': [('total_overtime', '&lt;', 0)]}">
+                        <field name="total_overtime" widget="float_time"/>
+                      </span>
+                      <span class="o_stat_value text-danger" attrs="{'invisible': [('total_overtime', '&gt;=', 0)]}">
+                        <field name="total_overtime" widget="float_time"/>
+                      </span>
+                      <span class="o_stat_text">Extra Hours</span>
+                    </div>
+                  </button>
+                </div>
+                <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                <field name="avatar_128" invisible="1"/>
+                <field name="image_1920" widget="image" class="oe_avatar" options="{&quot;zoom&quot;: true, &quot;preview_image&quot;:&quot;avatar_128&quot;}"/>
+                <div class="oe_title" name="studio_div_c9e2f5">
+                  <h1 class="d-flex">
+                    <field name="name" placeholder="Employee's Name" required="True"/>
+                    <a title="Chat" icon="fa-comments" href="#" class="ml8 o_employee_chat_btn" invisible="not context.get('chat_icon')" attrs="{'invisible': [('user_id','=', False)]}" role="button">
+                      <i class="fa fa-comments"/>
+                    </a>
+                  </h1>
+                  <h2>
+                    <field name="job_title" placeholder="Job Position"/>
+                  </h2>
+                  <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" placeholder="Tags" groups="hr.group_hr_manager"/>
+                </div>
+                <group name="studio_group_5448d0">
+                  <group name="studio_group_24988b">
+                    <field name="mobile_phone" widget="phone"/>
+                    <field name="work_phone" widget="phone"/>
+                    <field name="work_email" widget="email"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="company_country_id" invisible="1"/>
+                    <field name="company_country_code" invisible="1"/>
+                  </group>
+                  <group name="studio_group_3f4bcf">
+                    <field name="department_id"/>
+                    <field name="parent_id"/>
+                    <field name="coach_id"/>
+                  </group>
+                </group>
+                <notebook>
+                  <page name="public" string="Work Information">
+                    <div id="o_work_employee_container" name="studio_div_941eb6">
+                      <!-- These two div are used to position org_chart -->
+                      <div id="o_work_employee_main" name="studio_div_e1a368">
+                        <group string="Location" name="studio_group_3c4654">
+                          <field name="address_id" context="{'show_address': 1}" options="{&quot;always_reload&quot;: True, &quot;highlight_first_line&quot;: True}"/>
+                          <field name="work_location_id" context="{'default_address_id': address_id}"/>
+                        </group>
+                        <group name="managers" string="Approvers" class="hide-group-if-empty" invisible="0">
+                          <!-- is overridden in other hr related modules -->
+                          <field name="leave_manager_id"/>
+                          <field name="expense_manager_id" context="{'default_company_id': company_id}"/>
+                        </group>
+                        <group name="departure" string="Departure" attrs="{'invisible': [('active', '=', True)]}">
+                          <field name="departure_reason_id" options="{'no_edit': True, 'no_create': True, 'no_open': True}"/>
+                          <field name="departure_description"/>
+                          <field name="departure_date"/>
+                        </group>
+                        <group string="Schedule" name="studio_group_98fb99">
+                          <field name="calendar_mismatch" invisible="1"/>
+                          <label for="resource_calendar_id"/>
+                          <div name="studio_div_20ab6a">
+                            <field name="resource_calendar_id" required="1" nolabel="1"/>
+                            <span attrs="{'invisible': [('calendar_mismatch', '=', False)]}" class="fa fa-exclamation-triangle text-danger o_calendar_warning pl-3">
+                            </span>
+                            <span class="o_calendar_warning_tooltip text-danger">
+                                Calendar Mismatch : The employee's calendar does not match its current contract calendar. This could lead to unexpected behaviors.
+                            </span>
+                          </div>
+                          <field name="id" invisible="1"/>
+                          <field name="tz" attrs="{'required': [('id', '!=', False)]}"/>
+                        </group>
+                        <group name="planning" string="Planning">
+                          <field name="default_planning_role_id"/>
+                          <field name="planning_role_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                        </group>
+                      </div>
+                      <div id="o_employee_right" name="studio_div_3dbca2">
+                        <h4 class="o_org_chart_title mb16 mt0">Organization Chart</h4>
+                        <field name="child_ids" widget="hr_org_chart" readonly="1"/>
+                      </div>
+                    </div>
+                  </page>
+                  <page name="personal_information" string="Private Information" groups="hr.group_hr_user">
+                    <group name="studio_group_3c6713">
+                      <group string="Private Contact" name="studio_group_41d71b">
+                        <field name="address_home_id" context="{                                                 'show_address': 1,                                                 'default_type': 'private',                                                 'form_view_ref': 'base.res_partner_view_form_private'}" options="{&quot;always_reload&quot;: True, &quot;highlight_first_line&quot;: True}"/>
+                        <field name="private_email" string="Email"/>
+                        <field name="phone" class="o_force_ltr" groups="hr.group_hr_user" string="Phone" readonly="True"/>
+                        <field name="lang" string="Language"/>
+                        <field name="bank_account_id" context="{'display_partner':True}" attrs="{'invisible' : [('address_home_id', '=', False)]}"/>
+                        <label for="km_home_work"/>
+                        <div class="o_row" name="div_km_home_work">
+                          <field name="km_home_work" groups="hr.group_hr_user"/>
+                          <span>Km</span>
+                        </div>
+                      </group>
+                      <group string="Citizenship" name="studio_group_ce1a22">
+                        <field name="country_id" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                        <field name="identification_id" groups="hr.group_hr_user"/>
+                        <field name="passport_id" groups="hr.group_hr_user"/>
+                        <field name="gender"/>
+                        <field name="birthday"/>
+                        <field name="place_of_birth" groups="hr.group_hr_user"/>
+                        <field name="country_of_birth" groups="hr.group_hr_user"/>
+                      </group>
+                      <group string="Marital Status" name="studio_group_e77371">
+                        <field name="marital"/>
+                        <field name="spouse_complete_name" attrs="{'invisible': [('marital', 'not in', ['married', 'cohabitant'])]}" groups="hr.group_hr_user"/>
+                        <field name="spouse_birthdate" attrs="{'invisible': [('marital', 'not in', ['married', 'cohabitant'])]}" groups="hr.group_hr_user"/>
+                      </group>
+                      <group string="Dependant" name="studio_group_3fe9b8">
+                        <field name="children"/>
+                      </group>
+                      <group string="Emergency" name="studio_group_61469b">
+                        <field name="emergency_contact"/>
+                        <field name="emergency_phone" class="o_force_ltr"/>
+                      </group>
+                      <group string="Work Permit" name="has_work_permit">
+                        <field name="visa_no"/>
+                        <field name="permit_no"/>
+                        <field name="visa_expire"/>
+                        <field name="work_permit_expiration_date"/>
+                        <field name="has_work_permit"/>
+                      </group>
+                      <group string="Education" name="studio_group_ba4a3f">
+                        <field name="certificate"/>
+                        <field name="study_field"/>
+                        <field name="study_school"/>
+                      </group>
+                    </group>
+                  </page>
+                  <page name="hr_settings" string="HR Settings" groups="hr.group_hr_user">
+                    <group name="studio_group_e4bb59">
+                      <group string="Status" name="active_group">
+                        <field name="employee_type"/>
+                        <field name="first_contract_date" attrs="{'invisible' : ['|', ('employee_type', 'not in', ['employee', 'student']), ('first_contract_date', '=', False)]}" readonly="1"/>
+                        <field name="user_id" string="Related User" domain="[('share', '=', False)]"/>
+                      </group>
+                      <group string="Attendance/Point of Sale" name="identification_group">
+                        <field name="pin" string="PIN Code"/>
+                        <label for="barcode"/>
+                        <div class="o_row" name="studio_div_85d62f">
+                          <field name="barcode"/>
+                          <button string="Generate" class="btn btn-link" type="object" name="generate_random_barcode" attrs="{'invisible': [('barcode', '!=', False)]}"/>
+                          <button name="571" string="Print Badge" class="btn btn-link" type="action" attrs="{'invisible': [('barcode', '=', False)]}"/>
+                        </div>
+                      </group>
+                      <group string="Payroll" name="payroll_group">
+                        <field name="contract_id" groups="hr_contract.group_hr_contract_manager"/>
+                        <field name="job_id"/>
+                        <field name="registration_number"/>
+                      </group>
+                      <group name="application_group" string="Application Settings">
+                        <field name="parent_user_id" invisible="1"/>
+                        <field name="next_appraisal_date" groups="base.group_no_one"/>
+                        <field name="last_appraisal_id" invisible="1"/>
+                      </group>
+                    </group>
+                  </page>
+                </notebook>
+              </sheet>
+            </form>
+          </field>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">maintenance.request</field>
+    <field name="name">Odoo Studio: equipment.request.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.odoo_studio_hr_contr_d31c8541-5625-4687-ac63-36b137416a95" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//group[@name='yearly_advantages']" position="inside">
+          <field name="x_studio_food_allowance" string="Food Allowance"/>
+          <field name="x_studio_transportation_allowance" string="Transportation Allowance "/>
+          <field name="x_studio_skills_allowance" string="Skills Allowance"/>
+          <field name="x_studio_incentive_allowance" string="Incentive Allowance"/>
+          <field name="x_studio_mobile_allowance" string="Mobile Allowance "/>
+          <field name="x_studio_natural_work_allowance" string="Natural Work Allowance "/>
+          <field name="x_studio_representative_allowance" string="Representative Allowance"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">hr.contract</field>
+    <field name="name">Odoo Studio: hr.contract.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.odoo_studio_hr_emplo_69642839-8bda-42a3-bae0-170004e95031" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='certificate']" position="replace">
+          <field name="x_studio_educational_degree" string="Educational Degree" attrs="{}" required="1"/>
+        </xpath>
+        <xpath expr="//field[@name='mobile_phone']" position="before">
+          <field name="x_studio_a_name" string="A-Name" help="Arabic Name" attrs="{}" required="1"/>
+        </xpath>
+        <xpath expr="//field[@name='work_phone']" position="attributes">
+          <attribute name="attrs">{}</attribute>
+          <attribute name="required">1</attribute>
+        </xpath>
+        <xpath expr="//field[@name='department_id']" position="attributes">
+          <attribute name="attrs">{}</attribute>
+          <attribute name="required">1</attribute>
+        </xpath>
+        <xpath expr="//field[@name='work_location_id']" position="after">
+          <field name="x_studio_entity" string="Entity" attrs="{}" required="1"/>
+        </xpath>
+        <xpath expr="//field[@name='marital']" position="before">
+          <field name="x_studio_name_of_father" string="Name of Father" attrs="{}" required="1"/>
+          <field name="x_studio_name_of_mother" string="Name of Mother" attrs="{}" required="1"/>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='personal_information']/group[1]/group[3]/separator[@name='has_work_permit']" position="after">
+          <field name="x_studio_smoker_yn" string="Smoker Y/N"/>
+        </xpath>
+        <xpath expr="//field[@name='country_id']" position="attributes">
+          <attribute name="attrs">{}</attribute>
+          <attribute name="required">1</attribute>
+        </xpath>
+        <xpath expr="//field[@name='identification_id']" position="attributes">
+          <attribute name="attrs">{}</attribute>
+          <attribute name="required">1</attribute>
+        </xpath>
+        <xpath expr="//field[@name='identification_id']" position="after">
+          <field name="x_studio_id_date" string="ID Date"/>
+          <field name="x_studio_char_field_ZjnjF"/>
+          <field name="x_studio_id_origin" string="ID origin"/>
+        </xpath>
+        <xpath expr="//field[@name='gender']" position="attributes">
+          <attribute name="attrs">{}</attribute>
+          <attribute name="required">1</attribute>
+        </xpath>
+        <xpath expr="//field[@name='gender']" position="after">
+          <field name="x_studio_military_service" string="Military service" attrs="{&quot;invisible&quot;: [[&quot;gender&quot;,&quot;!=&quot;,&quot;male&quot;]]}"/>
+          <field name="x_studio_end_of_postponing" string="End Of Postponing" attrs="{&quot;invisible&quot;: [[&quot;x_studio_military_service&quot;,&quot;!=&quot;,&quot;Postponed&quot;]]}"/>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='hr_settings']/group[1]/group[@name='active_group']/field[@name='user_id']" position="after">
+          <field name="x_studio_si_number" string="S.I Number" attrs="{}" required="1"/>
+          <field name="x_studio_si_date" string="S.I Date"/>
+        </xpath>
+        <xpath expr="//field[@name='job_id']" position="attributes">
+          <attribute name="attrs">{}</attribute>
+          <attribute name="required">1</attribute>
+          <attribute name="string">Job  Title</attribute>
+        </xpath>
+        <xpath expr="//field[@name='job_id']" position="after">
+          <field name="x_studio_a_job_title" string="A-Job Title"/>
+          <field name="x_studio_many2one_field_Lcl6P"/>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]" position="inside">
+          <page string="Experience" name="studio_page_2o9Yq">
+            <group name="studio_group_2o9Yq">
+              <group name="studio_group_2o9Yq_left">
+                <field name="x_studio_pre_experience" string="Pre-Experience"/>
+              </group>
+              <group name="studio_group_2o9Yq_right">
+                <field name="x_studio_local_experience" string="Local-Experience"/>
+              </group>
+            </group>
+          </page>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="hr.view_employee_form"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">hr.employee</field>
+    <field name="name">Odoo Studio: hr.employee.form customization</field>
+    <field name="priority">10000</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.odoo_studio_hr_emplo_7a463fad-b257-4f0b-b9ec-f1fecfe508e3" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//kanban[1]/templates[1]/t[1]/div[1]/div[1]/ul[1]/li[3]" position="replace"/>
+        <xpath expr="//kanban[1]/templates[1]/t[1]/div[1]/div[1]/div[1]/div[1]/strong[1]/field[@name='name']" position="after">
+          <field name="barcode" display="full" widget="badge"/>
+        </xpath>
+        <xpath expr="//field[@name='job_title']" position="after">
+          <field name="department_id" display="full"/>
+        </xpath>
+        <xpath expr="//kanban[1]/templates[1]/t[1]/div[1]/div[2]/div[1]/div[2]/div[1]" position="inside">
+          <xpath expr="//field[@name='activity_ids']" position="move"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">hr.employee</field>
+    <field name="name">Odoo Studio: hr.employee.kanban customization</field>
+    <field name="priority">99</field>
+    <field name="type">kanban</field>
+  </record>
+  <record id="studio_customization.odoo_studio_hr_emplo_7ae5f769-2808-4fc2-86db-66eceb5655d0" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//tree[1]/field[@name='name']" position="after">
+          <field name="barcode" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="hr.view_employee_tree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">hr.employee</field>
+    <field name="name">Odoo Studio: hr.employee.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_hr_job_f_e67c9415-458c-4ae7-a3e1-0d864281a97a" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='recruitment_page']/group[1]/group[@name='recruitment']/field[@name='company_id']" position="after">
+          <field name="x_studio_a_job_title" string="A-Job Title"/>
+        </xpath>
+        <xpath expr="//div[@name='recruitment_target']" position="after">
+          <field name="no_of_employee"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="hr.view_hr_job_form"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">hr.job</field>
+    <field name="name">Odoo Studio: hr.job.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.odoo_studio_hr_job_t_ace1beeb-2694-4bfb-9139-619944377d36" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//tree[1]/field[@name='name']" position="after">
+          <field name="x_studio_a_job_title" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="hr.view_hr_job_tree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">hr.job</field>
+    <field name="name">Odoo Studio: hr.job.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_mrp_prod_23a4b662-22a9-4739-8760-a02e854135f2" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//tree[1]/field[@name='name']" position="after">
+          <field name="location_dest_id" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="mrp.mrp_production_tree_view"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">mrp.production</field>
+    <field name="name">Odoo Studio: mrp.production.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_mrp_prod_de8a6294-0f1b-4ced-8de3-9bdec97c5b15" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='operations']/field[@name='workorder_ids']" position="inside">
+          <tree editable="bottom" multi_edit="1">
+            <field name="consumption" invisible="1"/>
+            <field name="company_id" invisible="1"/>
+            <field name="is_produced" invisible="1"/>
+            <field name="is_user_working" invisible="1"/>
+            <field name="product_uom_id" invisible="1" readonly="0"/>
+            <field name="production_state" invisible="1"/>
+            <field name="production_bom_id" invisible="1"/>
+            <field name="qty_producing" invisible="1"/>
+            <field name="time_ids" invisible="1"/>
+            <field name="working_state" invisible="1"/>
+            <field name="operation_id" invisible="1" domain="['|', ('bom_id', '=', production_bom_id), ('bom_id', '=', False)]" context="{'default_workcenter_id': workcenter_id, 'default_company_id': company_id}"/>
+            <field name="name" string="Operation"/>
+            <field name="workcenter_id"/>
+            <field name="product_id" optional="show"/>
+            <field name="qty_remaining" optional="show" string="Quantity"/>
+            <field name="finished_lot_id" optional="hide" string="Lot/Serial"/>
+            <field name="date_planned_start" optional="show"/>
+            <field name="date_planned_finished" optional="hide"/>
+            <field name="date_start" optional="hide" readonly="1"/>
+            <field name="date_finished" optional="hide" readonly="1"/>
+            <field name="duration_expected" widget="float_time" sum="expected duration"/>
+            <field name="duration" widget="mrp_timer" attrs="{'invisible': [('production_state','=', 'draft')], 'readonly': [('is_user_working', '=', True)]}" sum="real duration"/>
+            <field name="state" widget="badge" decoration-warning="state == 'progress'" decoration-success="state == 'done'" decoration-danger="state == 'cancel'" decoration-info="state not in ('progress', 'done', 'cancel')" attrs="{&quot;column_invisible&quot;: [[&quot;parent.state&quot;,&quot;=&quot;,&quot;draft&quot;]]}"/>
+            <field name="production_state" invisible="1"/>
+            <field name="quality_state" invisible="1"/>
+            <field name="test_type" invisible="1"/>
+            <button name="button_start" type="object" string="Start" class="btn-success" attrs="{'invisible': ['|', '|', '|', ('production_state','in', ('draft', 'done', 'cancel')), ('working_state', '=', 'blocked'), ('state', 'in', ('done', 'cancel')), ('is_user_working', '!=', False)]}"/>
+            <button name="button_pending" type="object" string="Pause" class="btn-warning" attrs="{'invisible': ['|', '|', ('production_state', 'in', ('draft', 'done', 'cancel')), ('working_state', '=', 'blocked'), ('is_user_working', '=', False)]}"/>
+            <button name="button_finish" type="object" string="Done" class="btn-success" attrs="&#10;                    {'invisible': ['|', '|', '|', ('production_state', 'in', ('draft', 'done')), ('working_state', '=', 'blocked'), ('is_user_working', '=', False), '&amp;', ('quality_state', '=', 'none'), ('test_type', 'not in', ['register_consumed_materials', 'register_byproducts', 'instructions'])]}&#10;                "/>
+            <button name="button_finish" type="object" string="Done" class="btn-warning" attrs="{'invisible': ['|', '|', '|', ('production_state', 'in', ('draft', 'done')), ('working_state', '=', 'blocked'), ('is_user_working', '=', False), '|', ('quality_state', '!=', 'none'), ('test_type', 'in', ['register_consumed_materials', 'register_byproducts', 'instructions'])]}"/>
+            <button name="366" type="action" string="Block" context="{'default_workcenter_id': workcenter_id}" class="btn-danger" attrs="{'invisible': ['|', ('production_state', 'in', ('draft', 'done', 'cancel')), ('working_state', '=', 'blocked')]}"/>
+            <button name="button_unblock" type="object" string="Unblock" context="{'default_workcenter_id': workcenter_id}" class="btn-danger" attrs="{'invisible': ['|', ('production_state', 'in', ('draft', 'done', 'cancel')), ('working_state', '!=', 'blocked')]}"/>
+            <button name="action_open_wizard" type="object" icon="fa-external-link" class="oe_edit_only" title="Open Work Order" context="{'default_workcenter_id': workcenter_id}"/>
+            <button name="open_tablet_view" type="object" icon="fa-tablet" title="Open Tablet View" context="{'from_production_order': True}" attrs="{'invisible': ['|', ('production_state', 'in', ('draft', 'cancel', 'done')), ('state', '=', 'done')]}"/>
+            <field name="show_json_popover" invisible="1"/>
+            <field name="json_popover" widget="mrp_workorder_popover" string=" " width="0.1" attrs="{'invisible': [('show_json_popover', '=', False)]}"/>
+          </tree>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='finished_products']/field[@name='move_byproduct_ids']/tree[1]/field[@name='product_id']" position="attributes">
+          <attribute name="options">{}</attribute>
+        </xpath>
+        <xpath expr="/form[1]/sheet[1]/notebook[1]/page[2]/field[1]" position="inside">
+          <form string="Production Workcenter" delete="0" create="0">
+            <field name="is_user_working" invisible="1"/>
+            <field name="working_state" invisible="1"/>
+            <field name="production_state" invisible="1"/>
+            <field name="allow_employee" invisible="1"/>
+            <field name="check_ids" invisible="1"/>
+            <field name="quality_check_fail" invisible="1"/>
+            <header>
+              <field name="state" widget="statusbar" statusbar_visible="pending,waiting,ready,progress,done"/>
+            </header>
+            <sheet>
+              <div class="oe_button_box" name="button_box">
+                <button class="oe_stat_button" name="action_see_move_scrap" type="object" icon="fa-arrows-v" attrs="{'invisible': [('scrap_count', '=', 0)]}">
+                  <div class="o_field_widget o_stat_info">
+                    <span class="o_stat_value">
+                      <field name="scrap_count"/>
+                    </span>
+                    <span class="o_stat_text">Scraps</span>
+                  </div>
+                </button>
+              </div>
+              <field name="workcenter_id" invisible="1"/>
+              <field name="company_id" invisible="1"/>
+              <field name="product_tracking" invisible="1"/>
+              <field name="product_id" invisible="1"/>
+              <field name="finished_lot_id" invisible="1"/>
+              <field name="qty_producing" invisible="1"/>
+              <group>
+                <group attrs="{'invisible': [('date_planned_start', '=', False)]}">
+                  <label for="date_planned_start" string="Planned Date"/>
+                  <div class="oe_inline">
+                    <field name="is_planned" invisible="1"/>
+                    <field name="date_planned_start" class="mr8 oe_inline" attrs="{'required': [('is_planned', '=', True)]}"/>
+                    <strong class="mr8 oe_inline">to</strong>
+                    <field name="date_planned_finished" class="oe_inline" attrs="{'required': [('is_planned', '=', True)]}"/>
+                    <field name="show_json_popover" invisible="1"/>
+                    <field name="json_popover" widget="mrp_workorder_popover" class="oe_inline mx-2" attrs="{'invisible': [('show_json_popover', '=', False)]}"/>
+                  </div>
+                  <label for="duration_expected"/>
+                  <div class="o_row">
+                    <field name="duration_expected" widget="float_time"/>
+                    <span>minutes</span>
+                  </div>
+                </group>
+                <group>
+                  <field name="production_id"/>
+                </group>
+              </group>
+              <notebook>
+                <page string="Components" name="components">
+                  <field name="move_raw_ids" readonly="1">
+                    <tree>
+                      <field name="state" invisible="1"/>
+                      <field name="product_type" invisible="1"/>
+                      <field name="product_id"/>
+                      <field name="product_qty" string="To Consume"/>
+                      <field name="reserved_availability" string="Reserved"/>
+                      <field name="quantity_done" string="Consumed"/>
+                      <field name="product_qty_available" string="On Hand" attrs="{'invisible': [('product_type', '!=', 'product')]}"/>
+                      <field name="product_virtual_available" string="Forecasted" attrs="{'invisible': [('product_type', '!=', 'product')]}"/>
+                    </tree>
+                  </field>
+                </page>
+                <page string="Time Tracking" name="time_tracking" groups="mrp.group_mrp_manager">
+                  <field name="time_ids" nolabel="1" context="{'default_workcenter_id': workcenter_id, 'default_workorder_id': id}">
+                    <tree editable="bottom">
+                      <field name="user_id" attrs="{'column_invisible': [('parent.allow_employee', '!=', False)]}"/>
+                      <field name="employee_id" attrs="{'column_invisible': [('parent.allow_employee', '=', False)]}"/>
+                      <field name="duration" widget="float_time" sum="Total duration"/>
+                      <field name="date_start"/>
+                      <field name="date_end"/>
+                      <field name="workcenter_id" invisible="1"/>
+                      <field name="company_id" invisible="1"/>
+                      <field name="loss_id" string="Productivity" optional="show"/>
+                    </tree>
+                    <form>
+                      <group>
+                        <group>
+                          <field name="date_start"/>
+                          <field name="date_end"/>
+                          <field name="duration" widget="float_time"/>
+                          <field name="company_id" invisible="1"/>
+                        </group>
+                        <group>
+                          <field name="user_id"/>
+                          <field name="workcenter_id"/>
+                          <field name="company_id" invisible="1"/>
+                          <field name="loss_id"/>
+                        </group>
+                      </group>
+                    </form>
+                  </field>
+                </page>
+                <page string="Finished Steps" name="finished_steps" attrs="{'invisible': [('check_ids', '=', [])]}">
+                  <field name="check_ids" domain="[('quality_state', '!=', 'none')]" readonly="1" context="{'form_view_ref': 'mrp_workorder.quality_check_workorder_form'}">
+                    <tree>
+                      <field name="quality_state" invisible="1"/>
+                      <field name="test_type" invisible="1"/>
+                      <field name="control_date" string="Date"/>
+                      <field name="user_id" string="Operator" attrs="{'column_invisible': [('parent.allow_employee', '!=', False)]}"/>
+                      <field name="employee_id" attrs="{'column_invisible': [('parent.allow_employee', '=', False)]}"/>
+                      <field name="finished_lot_id" string="Finished Lot/Serial Number" attrs="{'column_invisible': [('parent.product_tracking', '=', 'none')]}"/>
+                      <field name="title"/>
+                      <field name="result"/>
+                    </tree>
+                  </field>
+                </page>
+                <page string="Work Instruction" name="workorder_page_work_instruction" attrs="{'invisible': [('worksheet', '=', False), ('worksheet_google_slide', '=', False), ('operation_note', '=', False)]}">
+                  <field name="worksheet_type" invisible="1"/>
+                  <field name="worksheet" widget="pdf_viewer" attrs="{'invisible': [('worksheet_type', '!=', 'pdf')]}"/>
+                  <field name="worksheet_google_slide" widget="embed_viewer" attrs="{'invisible': [('worksheet_type', '!=', 'google_slide')]}"/>
+                  <field name="operation_note" attrs="{'invisible': [('worksheet_type', '!=', 'text')]}"/>
+                </page>
+                <field name="allow_workorder_dependencies" invisible="1"/>
+                <page string="Blocked By" name="dependencies" attrs="{'invisible': [('allow_workorder_dependencies', '=', False)]}">
+                  <field name="blocked_by_workorder_ids" nolabel="1">
+                    <tree editable="bottom">
+                      <field name="company_id" invisible="1"/>
+                      <field name="name" string="Operation"/>
+                      <field name="company_id" optional="hide" groups="base.group_multi_company"/>
+                      <field name="workcenter_id"/>
+                      <field name="date_planned_start" readonly="1"/>
+                      <field name="date_planned_finished" readonly="1"/>
+                      <field name="duration_expected" widget="float_time" sum="expected duration"/>
+                      <field name="production_state" invisible="1"/>
+                      <field name="state" widget="badge" decoration-warning="state == 'progress'" decoration-success="state == 'done'" decoration-info="state not in ('progress', 'done', 'cancel')" attrs="{'invisible': [('production_state', '=', 'draft')], 'column_invisible': [('parent.state', '=', 'draft')]}"/>
+                      <button class="oe_link float-end" string="View WorkOrder" name="action_open_wizard" type="object"/>
+                    </tree>
+                  </field>
+                </page>
+              </notebook>
+            </sheet>
+          </form>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">mrp.production</field>
+    <field name="name">Odoo Studio: mrp.production.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.odoo_studio_mrp_rout_728de35b-efb6-4998-a84f-7c6f8cf4687d" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='time_mode']" position="after">
+          <field name="workorder_count" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="mrp.mrp_routing_workcenter_tree_view"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">mrp.routing.workcenter</field>
+    <field name="name">Odoo Studio: mrp.routing.workcenter.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_operatio_b878b369-71fc-4d30-a2dc-3146dd184b1f" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='sequence']" position="after">
+          <field name="id" optional="show"/>
+        </xpath>
+        <xpath expr="//tree[1]/field[@name='name']" position="after">
+          <field name="default_location_src_id" optional="show"/>
+          <field name="default_location_dest_id" optional="show"/>
+          <field name="return_picking_type_id" optional="show"/>
+          <field name="show_operations" optional="show"/>
+          <field name="code" optional="show"/>
+          <field name="sequence_code" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.view_picking_type_tree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.picking.type</field>
+    <field name="name">Odoo Studio: Operation types customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_product__1762de46-4828-4075-a55a-93541889f5bf" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='default_code']" position="after">
+          <field name="x_studio_internal_reference_2_1" optional="show"/>
+        </xpath>
+        <xpath expr="//field[@name='uom_id']" position="after">
+          <field name="bom_count" optional="show"/>
+          <field name="base_unit_count" optional="show"/>
+          <field name="base_unit_name" optional="show"/>
+          <field name="description" optional="show"/>
+          <field name="warehouse_id" optional="show"/>
+          <field name="product_variant_id" optional="show"/>
+          <field name="attribute_line_ids" optional="show"/>
+          <field name="valuation" optional="show"/>
+          <field name="id" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="product.product_template_tree_view"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">product.template</field>
+    <field name="name">Odoo Studio: product.template.product.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_product__3291680d-c620-44e9-abf4-d5153f5049a0" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//form[@name='Product Template']/sheet[@name='product_form']/notebook[1]/page[@name='general_information']/group[1]/group[@name='group_standard_price']/div[not(@name)][2]" position="after">
+          <field name="x_studio_internal_reference_2_1" string="Internal Reference 2 "/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="product.product_template_only_form_view"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">product.template</field>
+    <field name="name">Odoo Studio: product.template.product.form customization</field>
+    <field name="priority">160</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.odoo_studio_product__c1f28285-f0c7-4ce3-a511-773109c4fd03" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='display_name']" position="before">
+          <field name="parent_id" optional="show"/>
+        </xpath>
+        <xpath expr="//field[@name='display_name']" position="after">
+          <field name="id" optional="show"/>
+          <field name="child_id" optional="show"/>
+          <field name="name" optional="show"/>
+          <field name="property_valuation" optional="show"/>
+          <field name="property_account_income_categ_id" optional="show"/>
+          <field name="property_account_expense_categ_id" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="product.product_category_list_view"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">product.category</field>
+    <field name="name">Odoo Studio: product.category.list customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_quality__27de242c-7b3e-40ce-bd00-cbb56a906e94" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='note']" position="replace"/>
+        <xpath expr="//field[@name='partner_id']" position="attributes">
+          <attribute name="attrs">{"invisible": [["partner_id","=",False]]}</attribute>
+        </xpath>
+        <xpath expr="//form[1]/sheet[1]/notebook[1]" position="after">
+          <group name="studio_group_8oL1Q">
+            <group name="studio_group_8oL1Q_left">
+              <field name="x_studio_char_field_jozmV"/>
+              <field name="x_studio_observed_temperature_"/>
+              <field name="x_studio_actual_density_"/>
+              <field name="x_studio_supplier_density_"/>
+            </group>
+            <group name="studio_group_8oL1Q_right">
+              <field name="x_studio_water_content_"/>
+              <field name="x_studio_visual_inspection_"/>
+            </group>
+          </group>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="quality_control.quality_check_view_form"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">quality.check</field>
+    <field name="name">Odoo Studio: quality.check.view.form customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.report_mrporder_e1b39264-8ee9-445a-9ab7-09be46abc0e4" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <t t-name="mrp.report_mrporder_copy_1">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="o">
+            <t t-call="web.basic_layout">
+              <div class="body">
+                <div style="font-size: 6pt; font-wight: bold; background-color: grey; width: 100%;">
+                        
+                            
+                                
+                        
+                    </div>
+                <div style="text-align: left; color: black;">www.batec-gb.com</div>
+                <div style="text-align: right; color: black;">info@batec-gb.com</div>
+              </div>
+            </t>
+          </t>
+        </t>
+      </t>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key">mrp.report_mrporder_copy_1</field>
+    <field name="mode">primary</field>
+    <field name="model" eval="False"/>
+    <field name="name">report_mrporder copy(1)</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.odoo_studio_report_m_4dee2d8a-b845-481e-b172-193212969e85" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="/t/t/t/t/div" position="attributes">
+          <attribute name="style" separator=";" add="margin-left:0px"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div" position="attributes">
+          <attribute name="style" separator=";" add="margin-left:0px"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div" position="attributes">
+          <attribute name="style" separator=";" add="margin-right:0px"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div" position="attributes">
+          <attribute name="style" separator=";" add="width:120px" remove="width:100%"/>
+        </xpath>
+        <xpath expr="/t/t/t/t/div" position="attributes">
+          <attribute name="style" separator=";" add="width:100px" remove="width:120px"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="studio_customization.report_mrporder_e1b39264-8ee9-445a-9ab7-09be46abc0e4"/>
+    <field name="key">gen_key.5b2b73</field>
+    <field name="mode">extension</field>
+    <field name="model" eval="False"/>
+    <field name="name">Odoo Studio: report_mrporder copy(1) customization</field>
+    <field name="priority">99</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_lo_67778c2c-2abf-4fa5-a46e-fd5cb0dcfd8a" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//tree[1]" position="attributes">
+          <attribute name="create">true</attribute>
+        </xpath>
+        <xpath expr="//field[@name='complete_name']" position="after">
+          <field name="warehouse_id" optional="show"/>
+          <field name="warehouse_view_ids" optional="show"/>
+        </xpath>
+        <xpath expr="//field[@name='usage']" position="after">
+          <field name="child_internal_location_ids" optional="show"/>
+          <field name="child_ids" optional="show"/>
+          <field name="incoming_move_line_ids" optional="show"/>
+          <field name="outgoing_move_line_ids" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.view_location_tree2"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.location</field>
+    <field name="name">Odoo Studio: stock.location.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_lo_c71747c3-a679-4e13-adac-99953f57888a" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//tree[1]/field[@name='name']" position="after">
+          <field name="product_ids" optional="show"/>
+          <field name="warehouse_ids" optional="show"/>
+          <field name="warehouse_domain_ids" optional="show"/>
+          <field name="rule_ids" optional="show"/>
+          <field name="product_categ_selectable" optional="show"/>
+          <field name="warehouse_selectable" optional="show"/>
+          <field name="product_selectable" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.stock_location_route_tree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.route</field>
+    <field name="name">Odoo Studio: stock.location.route.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_mo_1ff01f47-095c-4c73-b3dd-8de09ba1e6a8" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='lot_id']" position="after">
+          <field name="picking_type_id" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.view_move_line_tree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.move.line</field>
+    <field name="name">Odoo Studio: stock.move.line.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_pi_e28e918e-478a-48d2-bd4f-ed99f893b4c7" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='priority']" position="after">
+          <field name="id" optional="show"/>
+          <field name="product_id" optional="show"/>
+        </xpath>
+        <xpath expr="//tree[1]/field[@name='name']" position="after">
+          <field name="move_line_ids" optional="show"/>
+        </xpath>
+        <xpath expr="//field[@name='scheduled_date']" position="after">
+          <field name="message_needaction" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.vpicktree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.picking</field>
+    <field name="name">Odoo Studio: stock.picking.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_qu_aeee6b4a-d6a5-4233-bb4d-80062649bb5c" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='product_id']" position="after">
+          <field name="in_date" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.view_stock_quant_tree_inventory_editable"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.quant</field>
+    <field name="name">Odoo Studio: stock.quant.inventory.tree.editable customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_ru_e8151263-b515-4920-af5a-c7d3aaa59f24" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='action']" position="before">
+          <field name="display_name" optional="show"/>
+        </xpath>
+        <xpath expr="//field[@name='location_src_id']" position="after">
+          <field name="auto" optional="show"/>
+          <field name="sequence" optional="show"/>
+          <field name="procure_method" optional="show"/>
+          <field name="picking_type_id" optional="show"/>
+          <field name="active" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.view_stock_rule_tree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.rule</field>
+    <field name="name">Odoo Studio: stock.rule.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_va_d761c860-c175-4b63-b477-d099deb2a38f" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='create_date']" position="after">
+          <field name="account_move_id" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock_account.stock_valuation_layer_tree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.valuation.layer</field>
+    <field name="name">Odoo Studio: stock.valuation.layer.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.odoo_studio_stock_wa_ea734071-6e8a-49dc-b17f-76fc19149804" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//tree[1]/field[@name='name']" position="after">
+          <field name="delivery_route_id" optional="show"/>
+          <field name="wh_input_stock_loc_id" optional="show"/>
+          <field name="wh_output_stock_loc_id" optional="show"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock.view_warehouse_tree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.warehouse</field>
+    <field name="name">Odoo Studio: stock.warehouse.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.report_mrp_productio_ed94ff24-2626-4a5f-a9cb-a1a9a4e78218" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <t t-name="mrp.report_mrp_production_components_copy_1">
+        <h3>
+          <span>
+            Components
+        </span>
+        </h3>
+        <table class="table table-sm">
+          <t t-set="has_product_barcode" t-value="any(m.product_id.barcode for m in o.move_raw_ids)"/>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th t-if="o.state in ('progress', 'to_close','done')" t-attf-class="{{ 'text-end' if not has_product_barcode else '' }}">Consumed</th>
+              <th t-attf-class="{{ 'text-end' if not has_product_barcode else '' }}">To Consume</th>
+              <th t-if="has_product_barcode" width="15%" class="text-center">Barcode</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr t-foreach="o.move_raw_ids" t-as="raw_line">
+              <td>
+                <span t-field="raw_line.product_id"/>
+              </td>
+              <td t-attf-class="{{ 'text-end' if not has_product_barcode else '' }}" t-if="o.state in ('progress', 'to_close','done')">
+                <div>
+                  <span t-field="raw_line.quantity_done"/>
+                </div>
+              </td>
+              <td t-attf-class="{{ 'text-end' if not has_product_barcode else '' }}">
+                <span t-field="raw_line.product_uom_qty"/>
+                <span t-field="raw_line.product_uom" groups="uom.group_uom"/>
+              </td>
+              <td t-if="has_product_barcode" width="15%" class="text-center">
+                <t t-if="raw_line.product_id.barcode">
+                  <div t-field="raw_line.product_id.barcode" t-options="{'widget': 'barcode', 'width': 600, 'height': 100, 'img_style': 'width:100%;height:35px'}"/>
+                </t>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </t>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key">mrp.report_mrp_production_components_copy_1</field>
+    <field name="mode">primary</field>
+    <field name="model" eval="False"/>
+    <field name="name">report_mrp_production_components copy(1)</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.report_mrporder_copy_a5e1716f-a995-4ddd-b80e-44142f18d7d7" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <t t-name="mrp.report_mrporder_copy_1">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="o">
+            <t t-call="web.basic_layout">
+              <div class="content" dir="LTR" style="font-size: 9pt;">
+                <div style="font-size: 7pt; color: white; font-wight: bold; background-color: grey; width: 100%;">
+                  <table class="table table-borderless" style="width:100%">
+                    <tr>
+                      <td style="width:50% text-align: left;">www.batec-gb.com</td>
+                      <td style="width:50%; text-align: right;">info@batec-gb.com</td>
+                    </tr>
+                  </table>
+                </div>
+                <p>
+                  <img style=" margin-left: 40px; max-width: 50%" src="data:image/jpeg;base64,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"/>
+                </p>
+                <table class="table table-borderless" style="width:100%">
+                  <tr>
+                    <td style="width: 60%">
+                      <div style="text-align: center;"><!--PLT <span style="margin-right: 10px;"/>(NO.<span style="color: red;" t-field="o.lot_producing_id"/>)-->
+                                    PLT <span style="margin-right: 10px;"/>(NO.<span style="color: red;">4567865</span>)
+                                </div>
+                      <span style="font-size: 6pt;">.........................................................................</span>
+                      <div>
+                                    P.D <span style="margin-right: 40px;"/>:<span style="margin-right: 20px;"/> <span t-esc="o.date_finished.strftime('%d/%m/%Y')"/>
+                                </div>
+                      <span style="font-size: 6pt;">.........................................................................</span>
+                      <div>
+                                    P.S <span style="margin-right: 41px;"/>:<span style="margin-right: 20px;"/> 
+                                    
+                                    <span t-if="o.date_finished and o.date_finished.hour &gt; 20 and o.date_finished.hour &lt; 8">
+                                                Night
+                                            </span>
+                                            <span t-else="">
+                                            Day
+                                            </span>
+                                </div>
+                      <span style="font-size: 6pt;">.........................................................................</span>
+                      <div>
+                                    P.T <span style="margin-right: 42px;"/>:<span style="margin-right: 20px;"/> <span t-esc="o.date_finished.strftime('%H:%M:%S')"/>
+                                </div>
+                      <span style="font-size: 6pt;">.........................................................................</span>
+                      <div><!--P.TYP <span style="margin-right: 27px;"/>:<span style="margin-right: 20px;"/> <span t-field="o.print_barcode"/>-->
+                                    P.TYP <span style="margin-right: 27px;"/>:<span style="margin-right: 20px;"/> 102-01-00043
+                                </div>
+                      <span style="font-size: 6pt;">.........................................................................</span>
+                      <div><!--SHT/PLT <span style="margin-right: 14px;"/>:<span style="margin-right: 20px;"/> <span t-field="o.sheet_pallet"/>-->
+                                    SHT/PLT <span style="margin-right: 14px;"/>:<span style="margin-right: 20px;"/> 80
+                                </div>
+                      <span style="font-size: 6pt;">.........................................................................</span>
+                      <div><!--Q.INSP <span style="margin-right: 22px;"/>:<span style="margin-right: 20px;"/> <span t-field="o.inspector"/>-->
+                                    Q.INSP <span style="margin-right: 22px;"/>:<span style="margin-right: 20px;"/> NIZAR
+                                </div>
+                      <span style="font-size: 6pt;">.........................................................................</span>
+                      <div>
+                                    P.OPR <span style="margin-right: 26px;"/>:<span style="margin-right: 20px;"/> <span t-field="o.user_id"/>
+                                </div>
+                      <span style="font-size: 6pt;">.........................................................................</span>
+                      <div style="text-align: right;"><!--<span t-field="o.note"/>-->
+                                    _ H 2022/11/27
+                                </div>
+                      <span style="font-size: 6pt;">.........................................................................</span>
+                    </td>
+                    <td style="width:40%"/>
+                  </tr>
+                </table>
+                <br/>
+                <t t-set="merge_barcode" t-value="o.name"/>
+                <!--<t t-set="merge_barcode" t-value="o.print_barcode + o.lot_producing_id.name"/>-->
+                <center>
+                  <span t-esc="merge_barcode" t-options="{'widget': 'barcode',  'img_style': 'max-height:50pt; max-width:100%;', 'img_align': 'center'}"/>
+                  <br/>
+                  <br/>
+                </center>
+                <div style="font-size: 7pt; color: white; font-wight: bold; background-color: grey; width: 100%;">
+                  <table>
+                    <tr>
+                      <td>Batec Batiment technique</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </t>
+          </t>
+        </t>
+      </t>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key">mrp.report_mrporder_copy_1_copy_1</field>
+    <field name="mode">primary</field>
+    <field name="model" eval="False"/>
+    <field name="name">report_mrporder copy(1) copy(1)</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.studio_main_report_3074c30a-02d8-4db2-8cd3-59c991b6a188" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <t t-name="studio_main_report">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="doc">
+            <t t-call="studio_customization.studio_report_docume_c8ea513d-f447-4ec5-9087-80a635ea061d_document"/>
+          </t>
+        </t>
+      </t>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key">studio_customization.studio_report_docume_c8ea513d-f447-4ec5-9087-80a635ea061d</field>
+    <field name="mode">primary</field>
+    <field name="model" eval="False"/>
+    <field name="name">studio_customization.studio_report_docume_c8ea513d-f447-4ec5-9087-80a635ea061d</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="studio_customization.studio_report_docume_c8ea513d-f447-4ec5-9087-80a635ea061d" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <t t-name="studio_report_document">
+        <t t-call="web.external_layout">
+          <div class="page"/>
+        </t>
+      </t>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key">studio_customization.studio_report_docume_c8ea513d-f447-4ec5-9087-80a635ea061d_document</field>
+    <field name="mode">primary</field>
+    <field name="model" eval="False"/>
+    <field name="name">studio_customization.studio_report_docume_c8ea513d-f447-4ec5-9087-80a635ea061d_document</field>
+    <field name="priority">16</field>
+    <field name="type">qweb</field>
+  </record>
+</odoo>

@@ -6,8 +6,10 @@
             <t t-if="university">
                 <div class="row ">
                     <div class="col-12 university-search-bar ">
-                         <a class="text-reset text-decoration-none" href="/universities"> Universities </a>
-                         <a t-if="university.parent_id" class="text-reset text-decoration-none" t-attf-href="/universities?university=#{university.parent_id.id}">
+                         <a class="text-reset text-decoration-none"
+                            t-attf-href="/catalog?doc=#{doc}&amp;cat=#{cat}"
+                            t-out="catalog"/>
+                         <a t-if="university.parent_id" class="text-reset text-decoration-none" t-attf-href="/catalog?doc=#{doc}&amp;cat=#{cat}&amp;university=#{university.parent_id.id}">
                            / <t t-esc="university.parent_id.name"/>
                          </a>
                          / <t t-esc="university.name"/>
@@ -20,10 +22,21 @@
                     <t t-set="title">
                         Researches
                     </t>
+
                     <div class="form-inline ml-lg-2" >
                         <a id="filter_btn" class="btn btn-secondary btn-sm mx-1" href="#">
                             <i class="fa fa-filter"/>
                         </a>
+                    </div>
+                    <div class="back-menu">
+                            <button t-if="active_menu" class="btn btn-link btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
+                                <t t-esc="active_menu.name"/>
+                            </button>
+                            <ul class="p-2 dropdown-menu dropdown-menu-end list-inline">
+                                <li t-foreach="catalogs" t-as="c" t-key="c_index">
+                                    <a t-if="c.id != active_menu.id" t-att-href="c.url" t-out="c.name"/>
+                                </li>
+                            </ul>
                     </div>
                 </t>
                 <div id="filter_form" class="d-none filter-form">
@@ -246,7 +259,8 @@
                         <div class="col-md px-0 pt-5">
                             <div class="row ">
                                 <div class="col-12 university-search-bar ">
-                                    <a class="text-reset text-decoration-none" href="/universities"> Universities </a>
+                                    <a class="text-reset text-decoration-none"
+                                       t-attf-href="/catalog?doc=#{doc}&amp;cat=#{cat}" t-out="catalog"/>
                                     <t t-if="university">
                                         / <t t-esc="university.name"/>
                                     </t>
@@ -279,7 +293,7 @@
             <a t-foreach="universities" 
                 t-as="unv"
                 t-att-title="unv.name"
-                t-attf-href="#{base_url}?university=#{unv.id}" 
+                t-attf-href="#{base_url}?university=#{unv.id}&amp;doc=#{doc}&amp;cat=#{cat}"
                 class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
                 <t t-esc="unv.name"/>
                 <span class="badge text-bg-secondary rounded-pill" t-esc="unv.research_count"/>
@@ -305,7 +319,7 @@
         <div t-foreach="universities" t-as="unv" class="col-md-6 col-lg-3 mb-4">
             <article class="card border-1 shadow-sm h-100" itemscope="itemscope"
                      itemtype="http://schema.org/Universities">
-                    <a t-attf-href="#{base_url}?university=#{unv.id}"
+                    <a t-attf-href="#{base_url}?university=#{unv.id}&amp;doc=#{doc}&amp;cat=#{cat}"
                        class="text-reset text-decoration-none h-100 d-flex flex-column">
                         <header class="overflow-hidden bg-secondary rounded-top col-12">
                         <div class="d-block h-100 w-100">
@@ -319,7 +333,7 @@
                     </header>
                     </a>
                     <main class="card-body d-flex flex-column">
-                        <a t-attf-href="#{base_url}?university=#{unv.id}"
+                        <a t-attf-href="#{base_url}?university=#{unv.id}&amp;doc=#{doc}&amp;cat=#{cat}"
                             class="text-reset text-decoration-none h-100 d-flex flex-column">
                             <h3 t-attf-class="fw-bold my-3">
                                 <span t-field="unv.name" itemprop="name"/>

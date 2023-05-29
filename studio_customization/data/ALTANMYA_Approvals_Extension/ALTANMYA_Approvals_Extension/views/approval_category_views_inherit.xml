@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="approval_category_view_form_inherit" model="ir.ui.view">
+            <field name="name">approval.category.view.form.inherit</field>
+            <field name="model">approval.category</field>
+            <field name="inherit_id" ref="approvals.approval_category_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='manager_approval']" position="after">
+                    <field name="line_manager_approval"/>
+                </xpath>
+                <xpath expr="//field[@name='approver_ids']" position="after">
+                    <field name="priority_type" widget="radio"/>
+                    <field name="approver_sequence" attrs="{'invisible': [('approval_minimum', '=', 0)]}"/>
+                    <field name="notify_even_when_refused"/>
+                    <field name="show_all_approvals"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

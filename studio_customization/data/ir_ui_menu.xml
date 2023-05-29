@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="hr.menu_view_hr_contract_type" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="hr.hr_contract_type_action"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [ref('hr.group_hr_user')])]"/>
+    <field name="name">Employment Types</field>
+    <field name="parent_id" ref="hr.menu_config_recruitment"/>
+    <field name="sequence">2</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="hr.menu_view_hr_job" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="hr.action_hr_job"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Job Positions</field>
+    <field name="parent_id" ref="hr.menu_config_recruitment"/>
+    <field name="sequence" eval="False"/>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="quality_control.menu_config_quality_tags" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="quality_control.quality_tag_action"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [ref('base.group_no_one')])]"/>
+    <field name="name">Quality Tags</field>
+    <field name="parent_id" ref="quality_control.menu_quality_configuration"/>
+    <field name="sequence">3</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="quality_control.menu_quality_config_alert_stage" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="quality_control.quality_alert_stage_action"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [ref('base.group_no_one')])]"/>
+    <field name="name">Quality Alert Stages</field>
+    <field name="parent_id" ref="quality_control.menu_quality_configuration"/>
+    <field name="sequence">2</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="quality_control.menu_quality_config_alert_team" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="quality_control.quality_alert_team_action_config"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Quality Teams</field>
+    <field name="parent_id" ref="quality_control.menu_quality_configuration"/>
+    <field name="sequence">1</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="quality_control.menu_quality_control_points" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="quality_control.quality_point_action"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [ref('quality.group_quality_manager')])]"/>
+    <field name="name">Control Points</field>
+    <field name="parent_id" ref="quality_control.menu_quality_configuration"/>
+    <field name="sequence" eval="False"/>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="studio_customization.employees_classifica_5c2b3025-ee09-4a94-9510-58f41176d6ce" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="studio_customization.classification_52a966e3-2af8-46f7-9aa5-f804cf74aa22"/>
+    <field name="active" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Classification</field>
+    <field name="parent_id" ref="hr.menu_hr_root"/>
+    <field name="sequence">101</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+  <record id="studio_customization.employees_classifica_bf09bf50-8300-4834-bc64-b1c0d3caf298" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="studio_customization.classification_f7ed3ac3-5f2e-4807-9b0a-a96f6d6bf7a8"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Classification</field>
+    <field name="parent_id" ref="hr.menu_config_recruitment"/>
+    <field name="sequence">1</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+</odoo>

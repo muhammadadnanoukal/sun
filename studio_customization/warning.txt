@@ -1,0 +1,32 @@
+The following relational data haven't been exported because they either refer
+to a model that Studio doesn't export, or have no XML id:
+
+Record: mrp.group_mrp_manager
+Model: res.groups
+Field: category_id
+Type: many2one
+Value: ir.module.category(27,) ('Manufacturing')
+
+Record: mrp.group_mrp_manager
+Model: res.groups
+Field: users
+Type: many2many
+Value: res.users(6, 2, 84, 33, 18, 42, 25, 20, 16, 8, 41, 9, 40, 17, 50, 49, 46, 11, 47, 80, 19, 78, 79, 81, 51) ('ALTANMYA', 'Administrator', 'Administrator (copy)', 'BU1 HOS', 'Burhan Samaan', 'Daniel Al-dayoub', 'Elie Harb', 'Essa Khouri', 'Gabi Idrees', 'Haidar Alsheikh', 'MHD Akkari', 'Maher Alrihawi', 'Mhd Abdullateef Al-ahmed', 'Muhammad Ibrahim', 'Omar Arab', 'Paul Asmar', 'Razan Farah', 'Seyed Shehwan', 'Talent Acquisition Specialist', 'christelle.awwad@beam.world', 'obaida Alhamed', 'procurement@batec-gb.com', 'procurementdp@beam.world', 'rashad.zouheiry@beam.world', 'saaed.salamah')
+
+Record: studio_customization.manufacturing_admini_b5fdb6b0-dfcb-4836-9450-0d8fa6db253d
+Model: res.groups
+Field: category_id
+Type: many2one
+Value: ir.module.category(27,) ('Manufacturing')
+
+Record: studio_customization.manufacturing_admini_b5fdb6b0-dfcb-4836-9450-0d8fa6db253d
+Model: res.groups
+Field: users
+Type: many2many
+Value: res.users(6, 2, 84, 9, 13, 80, 78, 79, 81) ('ALTANMYA', 'Administrator', 'Administrator (copy)', 'Maher Alrihawi', 'Mouhamad Alduki', 'christelle.awwad@beam.world', 'procurement@batec-gb.com', 'procurementdp@beam.world', 'rashad.zouheiry@beam.world')
+
+Record: studio_customization.12cm_8cm_d7e26f05-30c2-4e97-95a5-f609ac7ff60b
+Model: report.paperformat
+Field: report_ids
+Type: one2many
+Value: ir.actions.report(1101,) ('Print Label')
